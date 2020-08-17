@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "社区",
+  "usingComponents": {
+    "home-header": "/pages/community/components/Header",
+    "main-recommend": "/pages/community/components/MainRecommend",
+    "main-follow": "/pages/community/components/MainFollow",
+    "main-fresh": "/pages/community/components/MainFresh"
+  }
+}
