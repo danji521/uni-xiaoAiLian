@@ -6,7 +6,11 @@
     "pages/news/news",
     "pages/find/find",
     "pages/my/my",
-    "pages/news/room"
+    "pages/news/room",
+    "pages/museum/museum",
+    "pages/museumAlbum/museumAlbum",
+    "pages/museumVideo/museumVideo",
+    "pages/museumVideosDetail/museumVideosDetail"
   ],
   "subPackages": [],
   "window": {

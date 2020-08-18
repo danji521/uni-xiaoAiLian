@@ -10,7 +10,6 @@
 			"path": "pages/home/home",
 			"style": {
 				"navigationBarTitleText": "首页"
-				// "navigationStyle": "custom"
 			}
 		}, {
 			"path": "pages/community/community",
@@ -34,6 +33,30 @@
 			}
 		}, {
 			"path": "pages/news/room",
+			"style": {
+				"navigationBarTitleText": "详情"
+			}
+		},
+		{
+			"path": "pages/museum/museum",
+			"style": {
+				"navigationBarTitleText": "详情"
+			}
+		},
+		{
+			"path": "pages/museumAlbum/museumAlbum",
+			"style": {
+				"navigationBarTitleText": "详情"
+			}
+		},
+		{
+			"path": "pages/museumVideo/museumVideo",
+			"style": {
+				"navigationBarTitleText": "详情"
+			}
+		},
+		{
+			"path": "pages/museumVideosDetail/museumVideosDetail",
 			"style": {
 				"navigationBarTitleText": "详情"
 			}
