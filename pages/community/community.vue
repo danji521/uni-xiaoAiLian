@@ -1,7 +1,7 @@
 <template>
 	<view class="community">
 		<!-- 头 -->
-		<HomeHeader></HomeHeader>
+		<header-nav></header-nav>
 		<!-- 搜索 -->
 		<view class="search">
 			<image src="../../static/community_1.png" mode=""></image>
@@ -10,18 +10,12 @@
 		<!-- 主体 -->
 		<view class="main">
 			<swiper class="main-swiper">
-				<swiper-item>
-					<main-recommend></main-recommend>
-				</swiper-item>
-				<swiper-item>
-					<main-follow></main-follow>
-				</swiper-item>
-				<swiper-item>
-					<main-fresh></main-fresh>
+				<swiper-item v-for="index in 3">
+					<main-swiper></main-swiper>
 				</swiper-item>
 			</swiper>
 		</view>
-		<view class="footer">
+		<view class="footer" @click="museum()">
 			<view class="origin"></view>
 			爱情陈列馆
 		</view>
@@ -29,21 +23,24 @@
 </template>
 
 <script>
-	import HomeHeader from './components/Header.vue'
-	import MainRecommend from './components/MainRecommend.vue'
-	import MainFollow from './components/MainFollow.vue'
-	import MainFresh from './components/MainFresh.vue'
+	import HeaderNav from './components/Header.vue'
+	import MainSwiper from './components/Main.vue'
 	export default {
 		components: {
-			HomeHeader,
-			MainRecommend,
-			MainFollow,
-			MainFresh
+			HeaderNav,
+			MainSwiper
 		},
 		data() {
 			return {
 
 			};
+		},
+		methods: {
+			museum() {
+				uni.navigateTo({
+					url: '/pages/museum/museum'
+				})
+			}
 		}
 
 	}

@@ -16,19 +16,23 @@
 			});
 		},
 		methods: {
-			onReadyStateUpdate({name}) {
+			onReadyStateUpdate({
+				name
+			}) {
 				const isSDKReady = name === this.$TIM.EVENT.SDK_READY ? true : false;
 				//自动监听并更新 sdk 的ready 状态 （未登录是 notReady  登录后是ready）
 				this.$store.commit("toggleIsSDKReady", isSDKReady);
-                //sdk ready 后  肯定完成了登录操作    这里可以获取用户存储在im的基础信息/离线消息/黑名单列表
+				//sdk ready 后  肯定完成了登录操作    这里可以获取用户存储在im的基础信息/离线消息/黑名单列表
 			},
-			
-			onReceiveMessage({data: messageList}) {
+
+			onReceiveMessage({
+				data: messageList
+			}) {
 				// this.handleAt(messageList);
 				this.$store.commit("pushCurrentMessageList", messageList);
 			},
 			//根据消息列表请求聊天对象的用户信息 并完成数据拼接
-		
+
 		},
 		onLaunch: function() {
 			console.log('App Launch')
