@@ -7658,7 +7658,7 @@ module.exports = g;
 /***/ }),
 /* 4 */
 /*!******************************************!*\
-  !*** E:/XM/uniapp_xiaoailian/pages.json ***!
+  !*** E:/XM/xiaoailian_uniapp/pages.json ***!
   \******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
@@ -7671,7 +7671,7 @@ module.exports = g;
 /* 7 */,
 /* 8 */
 /*!**************************************************!*\
-  !*** E:/XM/uniapp_xiaoailian/commen/tim/user.js ***!
+  !*** E:/XM/xiaoailian_uniapp/commen/tim/user.js ***!
   \**************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -7877,7 +7877,7 @@ function normalizeComponent (
 /***/ }),
 /* 12 */
 /*!*************************************************!*\
-  !*** E:/XM/uniapp_xiaoailian/commen/tim/tim.js ***!
+  !*** E:/XM/xiaoailian_uniapp/commen/tim/tim.js ***!
   \*************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -7926,7 +7926,7 @@ function genTestUserSig(userID) {
 /***/ }),
 /* 13 */
 /*!*****************************************************************!*\
-  !*** E:/XM/uniapp_xiaoailian/node_modules/tim-js-sdk/tim-js.js ***!
+  !*** E:/XM/xiaoailian_uniapp/node_modules/tim-js-sdk/tim-js.js ***!
   \*****************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -7937,7 +7937,7 @@ function genTestUserSig(userID) {
 /***/ }),
 /* 14 */
 /*!************************************************!*\
-  !*** E:/XM/uniapp_xiaoailian/commen/commen.js ***!
+  !*** E:/XM/xiaoailian_uniapp/commen/commen.js ***!
   \************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -8394,7 +8394,7 @@ commen;exports.default = _default;
 /***/ }),
 /* 15 */
 /*!**********************************************!*\
-  !*** E:/XM/uniapp_xiaoailian/store/index.js ***!
+  !*** E:/XM/xiaoailian_uniapp/store/index.js ***!
   \**********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {

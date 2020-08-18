@@ -53,6 +53,6 @@
       }
     ]
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap47.json"
+  "permission": {},
+  "usingComponents": {}
 }

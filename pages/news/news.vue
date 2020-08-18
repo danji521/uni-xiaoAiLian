@@ -240,6 +240,10 @@
 		padding: 30rpx 0;
 		font-size: 30rpx;
 		border-bottom: 2rpx solid #999999;
+		position: fixed;
+		/* top: 0; */
+		width: 100%;
+		background-color: #FFFFFF;
 	}
 
 	.li view {
@@ -317,6 +321,8 @@
 		padding-top: 20rpx;
 		background: #fff;
 		height: 80rpx;
+		position: fixed;
+		top: 150rpx;
 
 	}
 
