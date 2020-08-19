@@ -9,8 +9,10 @@
 			<view>陈列馆</view>
 		</view>
 		<view>
-			<image src="../../../static/home_0.png" mode=""></image>
-			<view>闹钟</view>
+			<navigator url="/pages/rest/rest">
+				<image src="../../../static/home_0.png" mode=""></image>
+				<view>闹钟</view>
+			</navigator>
 		</view>
 		<view>
 			<image src="../../../static/home_1.png" mode=""></image>
