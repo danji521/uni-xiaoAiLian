@@ -36,58 +36,94 @@
 			"style": {
 				"navigationBarTitleText": "详情"
 			}
+		}
+	],
+	"subPackages": [{
+			"root": "pagesA",
+			"pages": [{
+				"path": "anniversary/anniversary",
+				"style": {
+					"navigationBarTitleText": "纪念日"
+				}
+			}]
+		}, {
+			"root": "pagesA",
+			"pages": [{
+				"path": "detailedList/detailedList",
+				"style": {
+					"navigationBarTitleText": "完成清单"
+				}
+			}]
+		}, {
+			"root": "pagesA",
+			"pages": [{
+				"path": "rest/rest",
+				"style": {
+					"navigationBarTitleText": "闹钟"
+				}
+			}]
 		},
 		{
-			"path": "pages/museum/museum",
-			"style": {
-				"navigationBarTitleText": "详情"
-			}
+			"root": "pagesA",
+			"pages": [{
+				"path": "museum/museum",
+				"style": {
+					"navigationBarTitleText": "陈列馆"
+				}
+			}]
 		},
 		{
-			"path": "pages/museumAlbum/museumAlbum",
-			"style": {
-				"navigationBarTitleText": "详情"
-			}
+			"root": "pagesA",
+			"pages": [{
+				"path": "personal/personal",
+				"style": {
+					"navigationBarTitleText": "个人中心"
+				}
+			}]
 		},
 		{
-			"path": "pages/museumVideo/museumVideo",
-			"style": {
-				"navigationBarTitleText": "详情"
-			}
+			"root": "pagesA",
+			"pages": [{
+				"path": "follow/follow",
+				"style": {
+					"navigationBarTitleText": "关注"
+				}
+			}]
 		},
 		{
-			"path": "pages/museumVideosDetail/museumVideosDetail",
-			"style": {
-				"navigationBarTitleText": "详情"
-			}
+			"root": "pagesA",
+			"pages": [{
+				"path": "comment/comment",
+				"style": {
+					"navigationBarTitleText": "评论"
+				}
+			}]
+		},
+		{
+			"root": "pagesA",
+			"pages": [{
+				"path": "museumVideosDetail/museumVideosDetail",
+				"style": {
+					"navigationBarTitleText": "详情"
+				}
+			}]
 		}, {
-			"path": "pages/rest/rest",
-			"style": {}
-		}, {
-			"path": "pages/personal/personal",
-			"style": {
-				"navigationBarTitleText": "个人中心"
-			}
-		}, {
-			"path": "pages/follow/follow",
-			"style": {
-				"navigationBarTitleText": "关注"
-			}
-		}, {
-			"path": "pages/comment/comment",
-			"style": {
-				"navigationBarTitleText": "评论"
-			}
-		}, {
-			"path": "pages/detailedList/detailedList",
-			"style": {
-				"navigationBarTitleText": "完成清单"
-			}
-		}, {
-			"path": "pages/anniversary/anniversary",
-			"style": {
-				"navigationBarTitleText": "纪念日"
-			}
+			"root": "pagesA",
+			"pages": [{
+				"path": "museumAlbum/museumAlbum",
+				"style": {
+					"navigationBarTitleText": "详情"
+				}
+			}]
+		},
+		{
+			"root": "pagesA",
+			"pages": [{
+				"path": "museumVideo/museumVideo",
+				"style": {
+					"navigationBarTitleText": "详情"
+				}
+			}]
 		}
 	],
 	"globalStyle": {

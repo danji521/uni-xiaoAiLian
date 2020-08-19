@@ -6,19 +6,25 @@
     "pages/news/news",
     "pages/find/find",
     "pages/my/my",
-    "pages/news/room",
-    "pages/museum/museum",
-    "pages/museumAlbum/museumAlbum",
-    "pages/museumVideo/museumVideo",
-    "pages/museumVideosDetail/museumVideosDetail",
-    "pages/rest/rest",
-    "pages/personal/personal",
-    "pages/follow/follow",
-    "pages/comment/comment",
-    "pages/detailedList/detailedList",
-    "pages/anniversary/anniversary"
+    "pages/news/room"
   ],
-  "subPackages": [],
+  "subPackages": [
+    {
+      "root": "pagesA",
+      "pages": [
+        "anniversary/anniversary",
+        "detailedList/detailedList",
+        "rest/rest",
+        "museum/museum",
+        "personal/personal",
+        "follow/follow",
+        "comment/comment",
+        "museumVideosDetail/museumVideosDetail",
+        "museumAlbum/museumAlbum",
+        "museumVideo/museumVideo"
+      ]
+    }
+  ],
   "window": {
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "uni-app",

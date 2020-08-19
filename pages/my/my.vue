@@ -2,14 +2,14 @@
 	<view class="my">
 		<view class="my-name">
 			<view class="my-name-logo">
-				<navigator url="/pages/personal/personal">
+				<navigator url="/pagesA/personal/personal">
 					<image src="../../static/home_6.png" mode=""></image>
 				</navigator>
 				<view>爱你</view>
 			</view>
 			<view class="my-name-comment">
 				<view class="my-name-comment-li">
-					<navigator url="/pages/follow/follow">
+					<navigator url="/pagesA/follow/follow">
 						<view>5</view>
 						<view>关注</view>
 					</navigator>
@@ -19,7 +19,7 @@
 					<view>赞</view>
 				</view>
 				<view class="my-name-comment-li">
-					<navigator url="/pages/comment/comment">
+					<navigator url="/pagesA/comment/comment">
 						<view>10</view>
 						<view>评论</view>
 					</navigator>
