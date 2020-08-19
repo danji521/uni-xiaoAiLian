@@ -60,30 +60,36 @@
 			"style": {
 				"navigationBarTitleText": "详情"
 			}
-		}
-	    ,{
-            "path" : "pages/rest/rest",
-            "style" : {}
-        }
-        ,{
-            "path" : "pages/personal/personal",
-            "style" : {
+		}, {
+			"path": "pages/rest/rest",
+			"style": {}
+		}, {
+			"path": "pages/personal/personal",
+			"style": {
 				"navigationBarTitleText": "个人中心"
 			}
-        }
-        ,{
-            "path" : "pages/follow/follow",
-            "style" : {
+		}, {
+			"path": "pages/follow/follow",
+			"style": {
 				"navigationBarTitleText": "关注"
 			}
-        }
-        ,{
-            "path" : "pages/comment/comment",
-            "style" : {
+		}, {
+			"path": "pages/comment/comment",
+			"style": {
 				"navigationBarTitleText": "评论"
 			}
-        }
-    ],
+		}, {
+			"path": "pages/detailedList/detailedList",
+			"style": {
+				"navigationBarTitleText": "完成清单"
+			}
+		}, {
+			"path": "pages/anniversary/anniversary",
+			"style": {
+				"navigationBarTitleText": "纪念日"
+			}
+		}
+	],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "uni-app",

@@ -10,7 +10,13 @@
     "pages/museum/museum",
     "pages/museumAlbum/museumAlbum",
     "pages/museumVideo/museumVideo",
-    "pages/museumVideosDetail/museumVideosDetail"
+    "pages/museumVideosDetail/museumVideosDetail",
+    "pages/rest/rest",
+    "pages/personal/personal",
+    "pages/follow/follow",
+    "pages/comment/comment",
+    "pages/detailedList/detailedList",
+    "pages/anniversary/anniversary"
   ],
   "subPackages": [],
   "window": {

@@ -21,7 +21,7 @@
 				<image src="../../static/rest_2.png" mode="" class="active"></image>
 				<image src="../../static/home_6.png" mode=""></image>
 			</view>
-			<view class="sleep-clock-in" @click="rests()">起床打卡</view>
+			<view class="sleep-clock-in getupbox" @click="rests()">起床打卡</view>
 			<view class="sleep-wake">叫醒他</view>
 		</view>
 	</view>
@@ -96,9 +96,13 @@
 		width: 490rpx;
 		height: 90rpx;
 		border-radius: 50rpx;
-		background-color: red;
+		background-color: #ffb434;
 		position: relative;
 		top: 400rpx;
+	}
+
+	.getupbox {
+		background-color: #33a0ff;
 	}
 
 	.sleep-wake {
@@ -110,7 +114,7 @@
 		width: 490rpx;
 		height: 90rpx;
 		border-radius: 50rpx;
-		background-color: #E5E5E5;
+		background-color: #c1c1c1;
 		position: relative;
 		top: 450rpx;
 	}

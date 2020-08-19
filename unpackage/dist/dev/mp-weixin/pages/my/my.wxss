@@ -106,8 +106,8 @@
 }
 .my-more image {
   margin-bottom: 28rpx;
-  width: 60rpx;
-  height: 40rpx;
+  width: 90rpx;
+  height: 70rpx;
 }
 .my-more-li {
   text-align: center;

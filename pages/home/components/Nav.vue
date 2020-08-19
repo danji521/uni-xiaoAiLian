@@ -1,12 +1,16 @@
 <template>
 	<view class="nav">
 		<view>
-			<image src="../../../static/home_2.png" mode=""></image>
-			<view>纪念日</view>
+			<navigator url="/pages/anniversary/anniversary">
+				<image src="../../../static/home_2.png" mode=""></image>
+				<view>纪念日</view>
+			</navigator>
 		</view>
 		<view>
-			<image src="../../../static/home_3.png" mode=""></image>
-			<view>陈列馆</view>
+			<navigator url="/pages/museum/museum">
+				<image src="../../../static/home_3.png" mode=""></image>
+				<view>陈列馆</view>
+			</navigator>
 		</view>
 		<view>
 			<navigator url="/pages/rest/rest">
@@ -15,8 +19,10 @@
 			</navigator>
 		</view>
 		<view>
-			<image src="../../../static/home_1.png" mode=""></image>
-			<view>清单</view>
+			<navigator url="/pages/detailedList/detailedList">
+				<image src="../../../static/home_1.png" mode=""></image>
+				<view>清单</view>
+			</navigator>
 		</view>
 	</view>
 </template>
