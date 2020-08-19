@@ -9,16 +9,20 @@
 			</view>
 			<view class="my-name-comment">
 				<view class="my-name-comment-li">
-					<view>5</view>
-					<view>关注</view>
+					<navigator url="/pages/follow/follow">
+						<view>5</view>
+						<view>关注</view>
+					</navigator>
 				</view>
 				<view class="my-name-comment-li">
 					<view>20</view>
 					<view>赞</view>
 				</view>
 				<view class="my-name-comment-li">
-					<view>10</view>
-					<view>评论</view>
+					<navigator url="/pages/comment/comment">
+						<view>10</view>
+						<view>评论</view>
+					</navigator>
 				</view>
 			</view>
 		</view>

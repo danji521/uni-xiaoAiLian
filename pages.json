@@ -71,6 +71,18 @@
 				"navigationBarTitleText": "个人中心"
 			}
         }
+        ,{
+            "path" : "pages/follow/follow",
+            "style" : {
+				"navigationBarTitleText": "关注"
+			}
+        }
+        ,{
+            "path" : "pages/comment/comment",
+            "style" : {
+				"navigationBarTitleText": "评论"
+			}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
