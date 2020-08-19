@@ -38,7 +38,7 @@
 		methods: {
 			museum() {
 				uni.navigateTo({
-					url: '/pages/museum/museum'
+					url: '/pagesA/museum/museum'
 				})
 			}
 		}

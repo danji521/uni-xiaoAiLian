@@ -170,7 +170,7 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     museum: function museum() {
       uni.navigateTo({
-        url: '/pages/museum/museum' });
+        url: '/pagesA/museum/museum' });
 
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
