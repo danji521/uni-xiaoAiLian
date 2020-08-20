@@ -39,93 +39,64 @@
 		}
 	],
 	"subPackages": [{
-			"root": "pagesA",
-			"pages": [{
-				"path": "anniversary/anniversary",
-				"style": {
-					"navigationBarTitleText": "纪念日"
-				}
-			}]
+		"root": "pagesA",
+		"pages": [{
+			"path": "anniversary/anniversary",
+			"style": {
+				"navigationBarTitleText": "纪念日"
+			}
 		}, {
-			"root": "pagesA",
-			"pages": [{
-				"path": "detailedList/detailedList",
-				"style": {
-					"navigationBarTitleText": "完成清单"
-				}
-			}]
+			"path": "myLove/myLove",
+			"style": {
+				"navigationBarTitleText": "我的喜欢"
+			}
 		}, {
-			"root": "pagesA",
-			"pages": [{
-				"path": "rest/rest",
-				"style": {
-					"navigationBarTitleText": "闹钟"
-				}
-			}]
-		},
-		{
-			"root": "pagesA",
-			"pages": [{
-				"path": "museum/museum",
-				"style": {
-					"navigationBarTitleText": "陈列馆"
-				}
-			}]
-		},
-		{
-			"root": "pagesA",
-			"pages": [{
-				"path": "personal/personal",
-				"style": {
-					"navigationBarTitleText": "个人中心"
-				}
-			}]
-		},
-		{
-			"root": "pagesA",
-			"pages": [{
-				"path": "follow/follow",
-				"style": {
-					"navigationBarTitleText": "关注"
-				}
-			}]
-		},
-		{
-			"root": "pagesA",
-			"pages": [{
-				"path": "comment/comment",
-				"style": {
-					"navigationBarTitleText": "评论"
-				}
-			}]
-		},
-		{
-			"root": "pagesA",
-			"pages": [{
-				"path": "museumVideosDetail/museumVideosDetail",
-				"style": {
-					"navigationBarTitleText": "详情"
-				}
-			}]
+			"path": "detailedList/detailedList",
+			"style": {
+				"navigationBarTitleText": "完成清单"
+			}
 		}, {
-			"root": "pagesA",
-			"pages": [{
-				"path": "museumAlbum/museumAlbum",
-				"style": {
-					"navigationBarTitleText": "详情"
-				}
-			}]
-		},
-		{
-			"root": "pagesA",
-			"pages": [{
-				"path": "museumVideo/museumVideo",
-				"style": {
-					"navigationBarTitleText": "详情"
-				}
-			}]
-		}
-	],
+			"path": "rest/rest",
+			"style": {
+				"navigationBarTitleText": "闹钟"
+			}
+		}, {
+			"path": "museum/museum",
+			"style": {
+				"navigationBarTitleText": "陈列馆"
+			}
+		}, {
+			"path": "personal/personal",
+			"style": {
+				"navigationBarTitleText": "个人中心"
+			}
+		}, {
+			"path": "follow/follow",
+			"style": {
+				"navigationBarTitleText": "关注"
+			}
+		}, {
+			"path": "comment/comment",
+			"style": {
+				"navigationBarTitleText": "评论"
+			}
+		}, {
+			"path": "museumVideosDetail/museumVideosDetail",
+			"style": {
+				"navigationBarTitleText": "详情"
+			}
+		}, {
+			"path": "museumAlbum/museumAlbum",
+			"style": {
+				"navigationBarTitleText": "详情"
+			}
+		}, {
+			"path": "museumVideo/museumVideo",
+			"style": {
+				"navigationBarTitleText": "详情"
+			}
+		}]
+	}],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "uni-app",

@@ -57,7 +57,7 @@
 
 <style lang="scss">
 	.museum {
-		padding: 0 20rpx;
+		padding: 10rpx 35rpx;
 
 		.title {
 			display: flex;
