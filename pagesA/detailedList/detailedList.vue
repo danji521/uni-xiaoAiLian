@@ -1,10 +1,21 @@
 <template>
 	<view class="detailedList">
-		<view class="detailedList-number">已完成(5/160)</view>
-		<view class="detailedList-list" v-for="index in 8">
-			<image src="../../static/home_6.png" mode=""></image>
-			<view class="detailedList-list_text">一起穿情侣装</view>
+		<view class="detailedList-box">
+			<view class="detailedList-box-img">
+				<view>
+					<image src="../../static/detailedList_0.png" mode="" class="detailedList-box-logo"></image>
+					<view>用一些照片记录你们的甜蜜</view>
+					<image src="../../static/detailedList_1.png" mode="" class="detailedList-box-add"></image>
+				</view>
+			</view>
+			<view class="detailedList-box-text">
+				<view>
+					<view>一起穿情侣装我要向全世界宣言你是我的</view>
+					<image src="../../static/detailedList_2.png" mode=""></image>
+				</view>
+			</view>
 		</view>
+		<view class="detailedList-btn" @click="detailedListOk()">隐藏恋爱任务</view>
 	</view>
 </template>
 
@@ -14,46 +25,89 @@
 			return {
 
 			};
+		},
+		methods: {
+			detailedListOk() {
+				uni.navigateTo({
+					url: '/pagesA/detailedListOk/detailedListOk'
+				})
+			}
 		}
 	}
 </script>
 
 <style lang="scss">
 	.detailedList {
-		display: flow-root;
-		padding: 0 30rpx;
-		overflow-x: hidden;
-		// width: 100%;
-		min-height: 100vh;
-		background-image: linear-gradient(to bottom, #faebd4, #f6a1d8);
+		padding-top: 40rpx;
+		height: 100vh;
+		background-image: linear-gradient(bottom right, #FEDADE, #FF788C);
 	}
 
-	.detailedList-number {
-		padding: 20rpx 0;
+	.detailedList-box {
+		margin: 0 auto;
+		width: 86%;
+		// height: 400rpx;
+		border-radius: 10rpx;
 	}
 
-	.detailedList-list {
-		width: 330rpx;
-		height: 330rpx;
-		float: left;
-		margin: 15rpx 0;
-		border-radius: 30rpx;
-		margin-left: 15rpx;
-		background: rgba(0, 0, 0, 1);
+	.detailedList-box-img {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 580rpx;
+		background-color: #E5E5E5;
 
-		image {
-			width: 330rpx;
-			height: 330rpx;
-			border-radius: 30rpx;
-			opacity: .5;
+		view {
+			text-align: center;
+			color: #555555;
+			font-size: 30rpx;
 		}
 	}
 
-	.detailedList-list_text {
+	.detailedList-box-logo {
+		width: 260rpx;
+		height: 180rpx;
+		margin-bottom: 30rpx;
+	}
+
+	.detailedList-box-add {
+		position: relative;
+		bottom: -160rpx;
+		width: 100rpx;
+		height: 100rpx;
+	}
+
+	.detailedList-box-text {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding-top: 100rpx;
+		height: 200rpx;
+		background-color: #FFFFFF;
+
+		image {
+			margin-top: 20rpx;
+			width: 60rpx;
+			height: 60rpx;
+		}
+
+		view {
+			text-align: center;
+			width: 400rpx;
+			font-size: 35rpx;
+		}
+	}
+
+	.detailedList-btn {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 40rpx auto 0 auto;
+		width: 60%;
+		height: 80rpx;
 		color: #FFFFFF;
 		font-size: 40rpx;
-		position: relative;
-		top: -220rpx;
-		left: 35rpx;
+		border-radius: 10rpx;
+		background-color: #DD524D;
 	}
 </style>

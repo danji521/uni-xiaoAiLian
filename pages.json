@@ -51,7 +51,7 @@
 				"navigationBarTitleText": "我的喜欢"
 			}
 		}, {
-			"path": "detailedList/detailedList",
+			"path": "detailedListOk/detailedListOk",
 			"style": {
 				"navigationBarTitleText": "完成清单"
 			}
@@ -95,7 +95,11 @@
 			"style": {
 				"navigationBarTitleText": "详情"
 			}
-		}]
+		}    ,{
+                    "path" : "detailedList/detailedList",
+                    "style" : {}
+                }
+            ]
 	}],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
