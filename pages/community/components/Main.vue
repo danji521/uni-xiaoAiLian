@@ -7,12 +7,14 @@
 					<view>推荐话题</view>
 					<view>更多</view>
 				</view>
-				<view class="list" v-for="index in 3">
-					<view>#我和他的昵称由来#</view>
-					<view>
-						<image src="../../../static/community_2.png" mode=""></image>2955
+				<navigator url="/pagesA/topics/topics">
+					<view class="list" v-for="index in 3">
+						<view>#我和他的昵称由来#</view>
+						<view>
+							<image src="../../../static/community_2.png" mode=""></image>2955
+						</view>
 					</view>
-				</view>
+				</navigator>
 			</view>
 			<!-- 动态 -->
 			<view class="dynamic" v-for="index in 10">

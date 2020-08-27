@@ -26,7 +26,7 @@
 			<!-- <swiper>
 				<swiper-item v-for='index in 4'>
 					<scroll-view scroll-y="true" class="scroll-Y"> -->
-			<view class="find-swiper-list-li" v-for="index in 10">
+			<view class="find-swiper-list-li" v-for="index in 10" @click="findDetails()">
 				<view class="find-swiper-list-li-left">
 					<image src="../../static/home_5.png" mode=""></image>
 				</view>
@@ -54,6 +54,13 @@
 			return {
 
 			};
+		},
+		methods: {
+			findDetails() {
+				uni.navigateTo({
+					url: '/pagesA/findDetails/findDetails'
+				})
+			}
 		}
 	}
 </script>
