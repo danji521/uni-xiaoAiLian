@@ -14,9 +14,11 @@
 			多单身的男女一样情人节其实很多单身的男女一样情人节其实很多单
 			身的男女一样
 		</view>
-		<view class="bnt">
-			+添加讨论
-		</view>
+		<navigator url="/pagesA/discuss/discuss">
+			<view class="bnt">
+				+添加讨论
+			</view>
+		</navigator>
 		<view class="user">
 			<view class="user-title">精彩分享</view>
 			<view class="user-box">
