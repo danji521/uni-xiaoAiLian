@@ -5,16 +5,16 @@
 			<view class="conversation">
 				<view class="topic">
 					<view>推荐话题</view>
-					
-					<view><navigator url="/pagesA/topics/topics">更多</navigator></view>
-					
-				</view>
-					<view class="list" v-for="index in 3">
-						<view>#我和他的昵称由来#</view>
-						<view>
-							<image src="../../../static/community_2.png" mode=""></image>2955
-						</view>
+					<view>
+						<navigator url="/pagesA/topicsList/topicsList">更多</navigator>
 					</view>
+				</view>
+				<view class="list" v-for="index in 3" @click="topicsDetails()">
+					<view>#我和他的昵称由来#</view>
+					<view>
+						<image src="../../../static/community_2.png" mode=""></image>2955
+					</view>
+				</view>
 			</view>
 			<!-- 动态 -->
 			<view class="dynamic" v-for="index in 10">
@@ -56,6 +56,13 @@
 			return {
 
 			};
+		},
+		methods: {
+			topicsDetails() {
+				uni.navigateTo({
+					url: '/pagesA/topicsDetails/topicsDetails'
+				})
+			}
 		}
 	}
 </script>

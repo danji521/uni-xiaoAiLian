@@ -104,19 +104,14 @@
 				"navigationBarTitleText": "详情"
 			}
 		}, {
-			"path": "topics/topics",
+			"path": "topicsList/topicsList",
 			"style": {
 				"navigationBarTitleText": "话题&投票"
 			}
-		}    ,{
-                    "path" : "topicsDetails/topicsDetails",
-                    "style" : {}
-                }
-                ,{
-                    "path" : "topic/topic",
-                    "style" : {}
-                }
-            ]
+		}, {
+			"path": "topicsDetails/topicsDetails",
+			"style": {}
+		}]
 	}],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
