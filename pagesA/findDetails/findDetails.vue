@@ -30,7 +30,7 @@
 			身的男女一样
 		</view>
 		<view class="input">
-			<view class="input-box"><input type="text" value="" placeholder='写点啥'></view>
+			<view class="input-box"><input type="text" value="" placeholder="写点什么..."></view>
 			<view class="input-img">
 				<image src="../../static/findDetails_6.png" mode=""></image>
 				<image src="../../static/findDetails_2.png" mode=""></image>
@@ -71,6 +71,8 @@
 
 	.text {
 		padding: 0 20rpx;
+		line-height: 70rpx;
+		font-size: 35rpx;
 	}
 
 	.day {

@@ -112,6 +112,10 @@
                     "path" : "topicsDetails/topicsDetails",
                     "style" : {}
                 }
+                ,{
+                    "path" : "topic/topic",
+                    "style" : {}
+                }
             ]
 	}],
 	"globalStyle": {

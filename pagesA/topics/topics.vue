@@ -1,22 +1,11 @@
-<!-- <view class="topics"> -->
 <template>
 	<view class="topics">
-		<view class="nav">
-			<image src="../../static/findDetails_0.png" mode=""></image>
-		</view>
-		<view class="title">
-			3个脱单秘籍，要不要这么简单
-		</view>
-
-		<view class="text">
-			情人节其实很多单身的男女一样情人节其实很多单身的男女一
-			样情人节其情人节其实很多单身的男女一样情人节其实很多单身
-			的男女一样情人节其情人节其实很多单身的男女一样情人节其实很
-			多单身的男女一样情人节其实很多单身的男女一样情人节其实很多单
-			身的男女一样
-		</view>
-		<view class="bnt">
-			+添加讨论
+		<view class="topics-list">
+			<image src="../../static/findDetails_0.png" mode="" class="topics-list-img"></image>
+			<view class="topics-list-text">
+				<view>话题.第107期</view>
+				<view>喜欢一个人很多年是什么感觉？</view>
+			</view>
 		</view>
 	</view>
 </template>
@@ -32,42 +21,17 @@
 </script>
 
 <style lang="scss">
-	.nav {
+	.topics-list {
+		padding: 20rpx;
+	}
+
+	.topics-list-img {
+		height: 100%;
 		width: 100%;
-		height: 360rpx;
-
-		image {
-			width: 100%;
-			height: 100%;
-		}
+		border-radius: 30rpx;
 	}
 
-	.title {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: 160rpx;
-		font-size: 50rpx;
-	}
-
-	.text {
-		padding: 0 20rpx;
-		color: #999999;
-	}
-
-
-	.bnt {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		position: fixed;
-		right: 0;
-		bottom: 160rpx;
+	.topics-list-text {
 		color: #FFFFFF;
-		width: 200rpx;
-		height: 100rpx;
-		border-top-left-radius: 50rpx;
-		border-bottom-left-radius: 50rpx;
-		background-image: linear-gradient(to right, #ff82ba, #ffb1c4);
 	}
 </style>
