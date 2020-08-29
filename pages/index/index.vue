@@ -130,6 +130,7 @@
 			margin: 0 auto;
 			margin-bottom: 30rpx;
 			height: 80rpx;
+			font-size: 32rpx;
 			border-radius: 50rpx;
 			background-color: #f5f5f5;
 			padding: 5rpx 35rpx;
@@ -140,6 +141,7 @@
 		display: flex;
 		justify-content: space-around;
 		align-items: center;
+		color: #a2a2a2;
 	}
 
 	.login-view {
@@ -152,7 +154,7 @@
 		width: 70%;
 		border-radius: 40rpx;
 		height: 90rpx;
-		background-color: #ff8495;
+		background-image: linear-gradient(to left, #FEDADE, #FF788C);
 	}
 
 	.party-login_img {
@@ -181,6 +183,7 @@
 			top: 30rpx;
 			padding: 0 30rpx;
 			background-color: #FFFFFF;
+			color: #cecece;
 		}
 	}
 </style>

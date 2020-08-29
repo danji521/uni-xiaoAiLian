@@ -14,7 +14,7 @@
 							<image src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-wanghui/1ffce360-de48-11ea-81ea-f115fe74321c.jpg" mode=""></image>
 							<image src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-wanghui/1ffda6b0-de48-11ea-9dfb-6da8e309e0d8.jpg" mode=""></image>
 							<image src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-wanghui/200017b0-de48-11ea-8a36-ebb87efcf8c0.jpg" mode=""></image>
-							<image src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-wanghui/2004ab90-de48-11ea-9dfb-6da8e309e0d8.jpg" mode=""></image>
+							<!-- <image src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-wanghui/2004ab90-de48-11ea-9dfb-6da8e309e0d8.jpg" mode=""></image> -->
 						</view>
 						<view class="main-container-bt-new_fabulous">
 							<view>
@@ -46,8 +46,9 @@
 		background-color: #F5F5F5;
 		border-top-left-radius: 30rpx;
 		border-top-right-radius: 30rpx;
-		margin-top: -33rpx;
+		margin-top: -22rpx;
 		height: calc(100vh - 450rpx);
+		width: 100%;
 		position: absolute;
 		border-bottom: 33rpx solid #F5F5F5;
 	}
@@ -55,26 +56,26 @@
 	.scroll-Y {
 		height: 90%;
 		position: relative;
-		top: 82rpx;
+		top: 120rpx;
 
 	}
 
 	.main-container {
 		margin: 0 auto;
-		margin-left: 70rpx;
-		padding-bottom: 25rpx;
-		width: 90%;
+		margin-left: 100rpx;
+		padding-bottom: 64rpx;
+		width: 85%;
 		border-left: 1rpx solid #dddddd;
 	}
 
 	.main-container-up {
 		display: flex;
-		padding: 20rpx 0;
+		padding: 10rpx 0;
 	}
 
 	.main-container-up_circular {
-		width: 20rpx;
-		height: 20rpx;
+		width: 16rpx;
+		height: 16rpx;
 		margin-right: 20rpx;
 		margin-left: -20rpx;
 		border-radius: 50%;
@@ -83,16 +84,18 @@
 	}
 
 	.main-container-up_date {
-		padding-left: 20rpx;
+		padding-left: 18rpx;
+		color: #dadada;
 	}
 
 	.main-container-bt {
 		display: flex;
 		width: 85%;
-		margin-left: 55rpx;
-		padding: 10rpx 0;
+		margin-left: 50rpx;
+		padding: 16rpx 0 0 0;
 		border-radius: 10rpx;
 		background-color: #FFFFFF;
+		padding-left: 14rpx;
 	}
 
 	.main-container-bt-new {
@@ -100,9 +103,10 @@
 	}
 
 	.main-container-bt-new image {
-		width: 160rpx;
-		height: 160rpx;
-		margin: 5rpx 2.6%;
+		width: 154rpx;
+		height: 154rpx;
+		border-radius: 10rpx;
+		margin: 18rpx 2%;
 		float: left;
 	}
 
@@ -115,20 +119,22 @@
 		display: flex;
 		align-items: center;
 		justify-content: flex-end;
-		padding-right: 30rpx;
 		padding-top: 10rpx;
 		clear: both;
+		color: #dadada;
+		font-size: 30rpx;
 
 		view {
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			margin-right: 30rpx;
 		}
 
 		image {
-			margin-right: 10rpx;
-			width: 40rpx;
-			height: 40rpx;
+
+			width: 26rpx;
+			height: 26rpx;
 		}
 	}
 </style>

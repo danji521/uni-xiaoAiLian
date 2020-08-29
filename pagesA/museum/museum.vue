@@ -6,6 +6,7 @@
 				<view>更多</view>
 			</view>
 			<image src="../../static/img/q.jpg" mode=""></image>
+			<view class="museum-love-text">我不相信永远的爱恋 我只</view>
 		</view>
 		<view class="museum-album">
 			<view class="title">
@@ -57,16 +58,18 @@
 
 <style lang="scss">
 	.museum {
-		padding: 10rpx 35rpx;
+		padding: 0 35rpx;
 
 		.title {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
 			font-size: 35rpx;
-
+			color: #333333;
 			padding-left: 10rpx;
-			margin: 30rpx 0;
+			margin: 45rpx 0;
+			height: 35rpx;
+			border-radius: 3rpx;
 			border-left: 9rpx solid #ff6c98;
 		}
 
@@ -79,9 +82,17 @@
 	.museum-love {
 		image {
 			width: 100%;
-			height: 300rpx;
-			border-radius: 20rpx;
+			height: 264rpx;
+			border-radius: 30rpx;
 		}
+	}
+
+	.museum-love-text {
+		position: absolute;
+		margin-top: -90rpx;
+		color: #FFFFFF;
+		font-size: 40rpx;
+		margin-left: 10%;
 	}
 
 	.museum-album-list {
@@ -100,13 +111,17 @@
 
 		image {
 			width: 100%;
-			height: 200rpx;
+			height: 205rpx;
 		}
 	}
-
+	.museum-video{
+		padding-top:1rpx;
+		clear: both;
+	}
 	#myVideo {
 		width: 100%;
 		height: 260rpx;
 		border-radius: 10rpx;
+		margin-bottom: 20rpx;
 	}
 </style>

@@ -39,12 +39,12 @@
 		-webkit-align-items: center;
 		align-items: center;
 		width: 90%;
-		height: 150rpx;
-		font-size: 33rpx;
+		height: 164rpx;
+		font-size: 5rpx;
 		border-radius: 30rpx;
 		background-color: #FFFFFF;
 		margin: 0 5%;
-		margin-top: -126rpx;
+		margin-top: -115rpx;
 		position: absolute;
 		z-index: 1;
 
@@ -55,7 +55,7 @@
 		image {
 			width: 60rpx;
 			height: 60rpx;
-			margin-bottom: 5rpx;
+			margin-bottom: 26rpx;
 		}
 	}
 </style>

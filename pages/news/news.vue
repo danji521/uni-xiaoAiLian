@@ -2,16 +2,20 @@
 	<view>
 		<view class="user-nav">
 			<view class="li">
-				<image src="../../static/news_0.png" mode=""></image>
-				<view>关注</view>
+				<navigator url="/pagesA/follow/follow">
+					<image src="../../static/news_0.png" mode=""></image>
+					<view>关注</view>
+				</navigator>
 			</view>
 			<view class="li">
 				<image src="../../static/news_1.png" mode=""></image>
 				<view>赞</view>
 			</view>
 			<view class="li">
-				<image src="../../static/news_2.png" mode=""></image>
-				<view>评论</view>
+				<navigator url="/pagesA/comment/comment">
+					<image src="../../static/news_2.png" mode=""></image>
+					<view>评论</view>
+				</navigator>
 			</view>
 		</view>
 		<view class="user-box">
@@ -240,7 +244,7 @@
 		padding: 30rpx 0;
 		font-size: 30rpx;
 		border-bottom: 2rpx solid #999999;
-		position: fixed;
+		/* position: fixed; */
 		/* top: 0; */
 		width: 100%;
 		background-color: #FFFFFF;
@@ -321,8 +325,8 @@
 		padding-top: 20rpx;
 		background: #fff;
 		height: 80rpx;
-		position: fixed;
-		top: 150rpx;
+		/* position: fixed;
+		top: 150rpx; */
 
 	}
 

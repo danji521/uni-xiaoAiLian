@@ -6,7 +6,8 @@
 			<image src="../../../static/home_5.png" mode=""></image>
 		</view>
 		<view class="header-bt">
-			<view>100</view>天
+			100
+			<view>天</view>
 		</view>
 	</view>
 </template>
@@ -25,46 +26,48 @@
 	.header {
 		background-image: linear-gradient(to right, #FEDADE, #FF788C);
 		z-index: 1;
-		height: 450rpx;
+		height: 342rpx;
 
 		.header-up {
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			padding-top: 100rpx;
+			padding-top: 60rpx;
 			color: #FFFFFF;
 			font-size: 46rpx;
 		}
 
 		.header-up image {
-			width: 100rpx;
-			height: 100rpx;
+			width: 88rpx;
+			height: 88rpx;
 			border-radius: 50%;
+			border: 1rpx solid #FFFFFF;
 		}
 
 		.header-up view {
-			margin: 0 50rpx;
+			margin: 0 36rpx;
+			margin-top: -30rpx;
 		}
 
 		.header-bt {
 			position: relative;
-			top: -5rpx;
+			top: -20rpx;
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			margin: 0 auto;
-			height: 100rpx;
-			width: 180rpx;
+			height: 80rpx;
+			width: 148rpx;
 			color: #FF868C;
-			font-size: 31rpx;
+			font-size: 36rpx;
+			font-weight: 600;
 			background-image: url(../../../static/home_9.png);
 			background-size: 100% 100%;
 		}
 
 		.header-bt view {
-			font-size: 55rpx;
-			font-weight: 600;
-			margin-left: 9rpx;
+			font-size: 26rpx;
+			margin-top: 10rpx;
 		}
 	}
 </style>

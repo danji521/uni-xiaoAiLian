@@ -1,7 +1,7 @@
 <template>
 	<view>
 		<view class="find-swiper-img">
-			<swiper :indicator-dots="true" :autoplay="true" :interval="3000" :duration="1000">
+			<swiper :autoplay="true" :interval="7000">
 				<swiper-item>
 					<image src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-wanghui/1ffce360-de48-11ea-81ea-f115fe74321c.jpg" mode=""></image>
 				</swiper-item>
@@ -15,6 +15,7 @@
 					<image src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-wanghui/2004ab90-de48-11ea-9dfb-6da8e309e0d8.jpg" mode=""></image>
 				</swiper-item>
 			</swiper>
+			<view class="find-swiper-img-text">学会主动一点，不要太慢热，要学会倾听，不要太固执，如此一来凭借温和善良肯定</view>
 		</view>
 		<view class="find-nav">
 			<view class="active">脱单攻略</view>
@@ -24,25 +25,25 @@
 		</view>
 		<view class="find-swiper-list">
 			<!-- <swiper>
-				<swiper-item v-for='index in 4'>
-					<scroll-view scroll-y="true" class="scroll-Y"> -->
-			<view class="find-swiper-list-li" v-for="index in 10" @click="findDetails()">
-				<view class="find-swiper-list-li-left">
-					<image src="../../static/home_5.png" mode=""></image>
-				</view>
-				<view class="find-swiper-list-li-right">
-					<view class="find-swiper-list-li-right_text">要多接触女生，扩大接触面，因为当你有了对比。。。</view>
-					<view class="find-swiper-list-li-right_day">
-						<view class="find-swiper-list-li-right_day_time">2019/11/02</view>
-						<view class="find-swiper-list-li-right_day_browse">
-							<image src="../../static/tabBar/tab-fi1.png" mode=""></image>
-							163
+				<swiper-item v-for='index in 4'> -->
+			<scroll-view scroll-y="true" class="scroll-Y">
+				<view class="find-swiper-list-li" v-for="index in 10" @click="findDetails()">
+					<view class="find-swiper-list-li-left">
+						<image src="../../static/home_5.png" mode=""></image>
+					</view>
+					<view class="find-swiper-list-li-right">
+						<view class="find-swiper-list-li-right_text">要多接触女生，扩大接触面，因为当你有了对比。。。</view>
+						<view class="find-swiper-list-li-right_day">
+							<view class="find-swiper-list-li-right_day_time">2019/11/02</view>
+							<view class="find-swiper-list-li-right_day_browse">
+								<image src="../../static/tabBar/tab-fi1.png" mode=""></image>
+								163
+							</view>
 						</view>
 					</view>
 				</view>
-			</view>
-			<!-- 	</scroll-view>
-				</swiper-item>
+			</scroll-view>
+			<!-- </swiper-item>
 			</swiper> -->
 		</view>
 	</view>
@@ -68,31 +69,43 @@
 <style lang="scss">
 	.find-swiper-img,
 	.find-swiper-img swiper {
-		margin: 15rpx 0;
-		width: 100%;
+		margin: 24rpx 15rpx;
 		height: 248rpx;
-
 		image {
-			margin: 0 10%;
-			width: 80%;
+			width: 100%;
 			height: 100%;
 			border-radius: 20rpx;
 		}
+	}
+
+	.find-swiper-img-text {
+		position: absolute;
+		margin-top: -130rpx;
+		margin-left: 10%;
+		font-size: 35rpx;
+		width: 80%;
+		color: #FFFFFF;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		line-clamp: 2;
+		-webkit-box-orient: vertical;
 	}
 
 	.find-nav {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 0 50rpx;
-		margin: 40rpx 0;
+		margin: 50rpx 20rpx;
 
 		view {
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			width: 20%;
-			height: 60rpx;
+			padding: 0 6rpx;
+			height: 52rpx;
 			font-size: 30rpx;
 			color: #a4a4a4;
 			border-radius: 30rpx;
@@ -101,7 +114,7 @@
 
 		.active {
 			color: #FFFFFF;
-			background-color: #fb7195;
+			background-image: linear-gradient(to right, #fc7093, #ffb2b0);
 		}
 	}
 
@@ -111,6 +124,7 @@
 	}
 
 	.scroll-Y {
+		padding-top: 20rpx;
 		width: 100%;
 		height: 100%;
 	}
@@ -118,14 +132,14 @@
 
 	.find-swiper-list-li {
 		display: flex;
-		padding: 0 50rpx;
-		margin: 15rpx 0;
+		padding: 0 20rpx;
+		margin: 50rpx 0;
 	}
 
 	.find-swiper-list-li-left {
 		image {
-			width: 220rpx;
-			height: 160rpx;
+			width: 180rpx;
+			height: 140rpx;
 			border-radius: 20rpx;
 		}
 	}
@@ -135,13 +149,13 @@
 	}
 
 	.find-swiper-list-li-right_text {
-		font-size: 35rpx;
-		height: 100rpx;
+		font-size: 40rpx;
+		height: 60rpx;
 		overflow: hidden;
 		text-overflow: ellipsis;
 		display: -webkit-box;
-		-webkit-line-clamp: 2;
-		line-clamp: 3;
+		-webkit-line-clamp: 1;
+		line-clamp: 1;
 		-webkit-box-orient: vertical;
 	}
 
@@ -151,7 +165,7 @@
 		align-items: center;
 		font-size: 20rpx;
 		color: #999999;
-		height: 90rpx;
+		margin-top: 50rpx;
 	}
 
 	.find-swiper-list-li-right_day_browse {
