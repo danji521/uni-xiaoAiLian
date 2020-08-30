@@ -1,6 +1,6 @@
 <template>
 	<view class="follow">
-		<scroll-view :scroll-top="scrollTop" scroll-y="true" class="scroll-Y">
+		<scroll-view scroll-y="true" class="scroll-Y">
 			<!-- 话题 -->
 			<view class="conversation">
 				<view class="topic">
@@ -68,9 +68,6 @@
 			getCommunityList() {
 				http.getCommunityList({}).then(res => {
 					this.userArry = res.result;
-					uni.switchTab({
-						url: '/pages/community/community'
-					});
 				})
 			}
 		}

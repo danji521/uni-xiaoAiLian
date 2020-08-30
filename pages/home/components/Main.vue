@@ -1,20 +1,16 @@
 <template>
 	<view class="main">
-		<scroll-view :scroll-top="scrollTop" scroll-y="true" class="scroll-Y">
-			<view class="main-container" v-for="index in 4">
+		<scroll-view scroll-y="true" class="scroll-Y">
+			<view class="main-container" v-for="(item,index) in userArry.data" :key='index'>
 				<view class="main-container-up">
 					<view class="main-container-up_circular"></view>
 					<view class="main-container-up_date">2019.10.25</view>
 				</view>
 				<view class="main-container-bt">
 					<view class="main-container-bt-new">
-						<view class="main-container-bt-new_text">不知道什么时候开始就特别自恋了</view>
+						<view class="main-container-bt-new_text">{{item.text}}</view>
 						<view class="main-container-bt-new_imgs">
-							<!-- <image src="../../static/home_6.png" mode="$2" v-for="index in  3"></image> -->
-							<image src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-wanghui/1ffce360-de48-11ea-81ea-f115fe74321c.jpg" mode=""></image>
-							<image src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-wanghui/1ffda6b0-de48-11ea-9dfb-6da8e309e0d8.jpg" mode=""></image>
-							<image src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-wanghui/200017b0-de48-11ea-8a36-ebb87efcf8c0.jpg" mode=""></image>
-							<!-- <image src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-wanghui/2004ab90-de48-11ea-9dfb-6da8e309e0d8.jpg" mode=""></image> -->
+							<image :src="item" mode="$2" v-for="(item,index) in  item.img" :key="index"></image>
 						</view>
 						<view class="main-container-bt-new_fabulous">
 							<view>
@@ -32,11 +28,23 @@
 </template>
 
 <script>
+	import http from '../../../utile/http.js'
 	export default {
 		data() {
 			return {
-
+				userArry: {}
 			};
+		},
+		created() {
+			this.getCommunityList()
+		},
+		methods: {
+			getCommunityList() {
+				http.getCommunityList({}).then(res => {
+					this.userArry = res.result;
+					console.log(this.userArry)
+				})
+			}
 		}
 	}
 </script>
