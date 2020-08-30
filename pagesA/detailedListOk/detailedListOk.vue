@@ -1,19 +1,27 @@
 <template>
 	<view class="detailedListOk">
 		<view class="detailedList-number">已完成(5/160)</view>
-		<view class="detailedList-list" v-for="index in 8">
-			<image src="../../static/home_6.png" mode=""></image>
-			<view class="detailedList-list_text">一起穿情侣装</view>
+		<view class="detailedList-list" v-for="(item,index) in detailedListOk.data" :key='index'>
+			<image :src="item.logo" mode=""></image>
+			<view class="detailedList-list_text">{{item.text}}</view>
 		</view>
 	</view>
 </template>
 
 <script>
+	import http from '../../utile/http.js'
 	export default {
 		data() {
 			return {
-
+				detailedListOk: {}
 			};
+		},
+		created() {
+			console.log("123")
+			http.getDetailedList({}).then(res => {
+				this.detailedListOk = res.result;
+				console.log(this.detailedListOk)
+			})
 		}
 	}
 </script>
@@ -50,6 +58,9 @@
 	}
 
 	.detailedList-list_text {
+		width: 250rpx;
+		height: 60rpx;
+		overflow-x: hidden;
 		color: #FFFFFF;
 		font-size: 40rpx;
 		position: relative;

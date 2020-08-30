@@ -51,6 +51,9 @@
   opacity: .5;
 }
 .detailedList-list_text {
+  width: 250rpx;
+  height: 60rpx;
+  overflow-x: hidden;
   color: #FFFFFF;
   font-size: 40rpx;
   position: relative;

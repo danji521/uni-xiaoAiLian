@@ -3,14 +3,17 @@
 		<view class="detailedList-box">
 			<view class="detailedList-box-img">
 				<view>
-					<image src="../../static/detailedList_0.png" mode="" class="detailedList-box-logo"></image>
+					<image src="../../static/detailedList_0.png" mode="" class="detailedList-box-logo" v-if="logoImg==''"></image>
+					<image :src="logoImg" mode="" class="detailedList-box-logo" v-else></image>
 					<view>用一些照片记录你们的甜蜜</view>
-					<image src="../../static/detailedList_1.png" mode="" class="detailedList-box-add"></image>
+					<image src="../../static/detailedList_1.png" mode="" class="detailedList-box-add" @click="addImg()"></image>
 				</view>
 			</view>
 			<view class="detailedList-box-text">
 				<view>
-					<view class="detailedList-box-text_text">一起穿情侣装我要向全世界宣言你是我的</view>
+					<view class="detailedList-box-text_text">
+						<editor id="editor" class="ql-container" :placeholder="text" @input="onEditorReady"></editor>
+					</view>
 					<image src="../../static/detailedList_2.png" mode=""></image>
 				</view>
 			</view>
@@ -20,17 +23,62 @@
 </template>
 
 <script>
+	import http from '../../utile/http.js'
 	export default {
 		data() {
 			return {
-
+				logoImg: '',
+				text: '一起穿情侣装我要向全世界宣告你是我的'
 			};
 		},
 		methods: {
+			onEditorReady(res) {
+				this.text = res.detail.text;
+				console.log(res)
+			},
 			detailedListOk() {
-				uni.navigateTo({
-					url: '/pagesA/detailedListOk/detailedListOk'
-				})
+				if (this.logoImg != '') {
+					http.detailedList({
+						logo: this.logoImg,
+						text: this.text
+					}).then(res => {
+						uni.navigateTo({
+							url: '/pagesA/detailedListOk/detailedListOk'
+						})
+					})
+				}
+			},
+			addImg() {
+				let _this = this;
+				//前端代码
+				uni.chooseImage({
+					count: 1,
+					success(res) {
+						console.log(res);
+						if (res.tempFilePaths.length > 0) {
+							let filePath = res.tempFilePaths[0]
+							//进行上传操作
+							// callback方式，与promise方式二选一即可
+							uniCloud.uploadFile({
+								filePath: filePath,
+								cloudPath: 'a.jpg',
+								onUploadProgress: function(progressEvent) {
+									console.log(progressEvent);
+									var percentCompleted = Math.round(
+										(progressEvent.loaded * 100) / progressEvent.total
+									);
+								},
+								success(err) {
+									_this.logoImg = err.fileID;
+									console.log(_this.logoImg)
+								},
+								fail() {},
+								complete() {}
+							});
+
+						}
+					}
+				});
 			}
 		}
 	}
@@ -104,6 +152,20 @@
 		text-align: center;
 		width: 400rpx;
 		font-size: 35rpx;
+	}
+
+	.ql-container {
+		display: block;
+		position: relative;
+		box-sizing: border-box;
+		-webkit-user-select: text;
+		user-select: text;
+		outline: none;
+		overflow: hidden;
+		width: 100%;
+		height: 90rpx !important;
+		min-height: 90rpx !important;
+
 	}
 
 	.detailedList-btn {

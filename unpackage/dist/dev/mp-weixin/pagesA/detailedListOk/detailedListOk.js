@@ -130,22 +130,30 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-var _default =
-{
-  data: function data() {
-    return {};
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
 
 
+
+
+
+
+
+
+
+
+var _http = _interopRequireDefault(__webpack_require__(/*! ../../utile/http.js */ 264));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = { data: function data() {return { detailedListOk: {} };}, created: function created() {var _this = this;console.log("123");_http.default.getDetailedList({}).then(function (res) {_this.detailedListOk = res.result;
+      console.log(_this.detailedListOk);
+    });
   } };exports.default = _default;
 
 /***/ }),
