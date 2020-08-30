@@ -13,7 +13,8 @@
       "root": "pagesA",
       "pages": [
         "anniversary/anniversary",
-        "detailedList/detailedList",
+        "myLove/myLove",
+        "detailedListOk/detailedListOk",
         "rest/rest",
         "museum/museum",
         "personal/personal",
@@ -21,13 +22,18 @@
         "comment/comment",
         "museumVideosDetail/museumVideosDetail",
         "museumAlbum/museumAlbum",
-        "museumVideo/museumVideo"
+        "museumVideo/museumVideo",
+        "detailedList/detailedList",
+        "findDetails/findDetails",
+        "topicsList/topicsList",
+        "topicsDetails/topicsDetails",
+        "discuss/discuss"
       ]
     }
   ],
   "window": {
     "navigationBarTextStyle": "white",
-    "navigationBarTitleText": "uni-app",
+    "navigationBarTitleText": "小爱恋",
     "navigationBarBackgroundColor": "#FF788C",
     "backgroundColor": "#FFFFFF"
   },
@@ -70,5 +76,6 @@
     ]
   },
   "permission": {},
-  "usingComponents": {}
+  "usingComponents": {},
+  "sitemapLocation": "sitemap57.json"
 }

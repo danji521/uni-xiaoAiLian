@@ -40,7 +40,7 @@
 		align-items: center;
 		width: 90%;
 		height: 164rpx;
-		font-size: 5rpx;
+		font-size: 30rpx;
 		border-radius: 30rpx;
 		background-color: #FFFFFF;
 		margin: 0 5%;

@@ -37,7 +37,7 @@
   -webkit-box-align: center;
   -webkit-align-items: center;
           align-items: center;
-  height: 130rpx;
+  height: 120rpx;
 }
 .personal-list image {
   width: 100rpx;

@@ -47,10 +47,10 @@
 		border-top-left-radius: 30rpx;
 		border-top-right-radius: 30rpx;
 		margin-top: -22rpx;
-		height: calc(100vh - 450rpx);
+		height: calc(100vh - 370rpx);
 		width: 100%;
 		position: absolute;
-		border-bottom: 33rpx solid #F5F5F5;
+		border-bottom: 48rpx solid #F5F5F5;
 	}
 
 	.scroll-Y {

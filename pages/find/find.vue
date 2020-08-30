@@ -120,7 +120,7 @@
 
 	.find-swiper-list,
 	.find-swiper-list swiper {
-		height: calc(100vh - 610rpx);
+		height: calc(100vh - 460rpx);
 	}
 
 	.scroll-Y {

@@ -25,36 +25,92 @@
 /* 透明度 */
 /* 文章场景相关 */
 .detailedList {
-  display: flow-root;
-  padding: 0 30rpx;
-  overflow-x: hidden;
-  min-height: 100vh;
-  background-image: -webkit-linear-gradient(top, #faebd4, #f6a1d8);
-  background-image: linear-gradient(to bottom, #faebd4, #f6a1d8);
+  padding-top: 82rpx;
+  height: calc(100vh - 82rpx);
+  background-image: -webkit-linear-gradient(top, #fcecd3, #ffb0e7);
+  background-image: linear-gradient(to bottom, #fcecd3, #ffb0e7);
 }
-.detailedList-number {
-  padding: 20rpx 0;
+.detailedList-box {
+  margin: 0 auto;
+  width: 588rpx;
+  border-radius: 10rpx;
 }
-.detailedList-list {
-  width: 330rpx;
-  height: 330rpx;
-  float: left;
-  margin: 15rpx 0;
-  border-radius: 30rpx;
-  margin-left: 15rpx;
-  background: black;
+.detailedList-box-img {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  height: 564rpx;
+  background-color: #fff9fd;
 }
-.detailedList-list image {
-  width: 330rpx;
-  height: 330rpx;
-  border-radius: 30rpx;
-  opacity: .5;
+.detailedList-box-img view {
+  text-align: center;
+  color: #d2d0d3;
+  font-size: 30rpx;
 }
-.detailedList-list_text {
+.detailedList-box-img view:nth-child(1) {
+  height: 260rpx;
+}
+.detailedList-box-logo {
+  width: 228rpx;
+  height: 184rpx;
+  margin-bottom: 40rpx;
+}
+.detailedList-box-add {
+  position: relative;
+  bottom: -80rpx;
+  width: 120rpx;
+  height: 120rpx;
+}
+.detailedList-box-text {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  height: 314rpx;
+  background-color: #FFFFFF;
+}
+.detailedList-box-text image {
+  position: relative;
+  top: 46rpx;
+  width: 60rpx;
+  height: 60rpx;
+}
+.detailedList-box-text view {
+  text-align: center;
+}
+.detailedList-box-text_text {
+  margin-top: 60rpx;
+  text-align: center;
+  width: 400rpx;
+  font-size: 35rpx;
+}
+.detailedList-btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  margin: 68rpx auto 0 auto;
+  width: 380rpx;
+  height: 80rpx;
   color: #FFFFFF;
   font-size: 40rpx;
-  position: relative;
-  top: -220rpx;
-  left: 35rpx;
+  border-radius: 10rpx;
+  background-color: #ff87ab;
 }
 

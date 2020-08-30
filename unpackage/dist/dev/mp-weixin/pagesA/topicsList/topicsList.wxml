@@ -1,0 +1,1 @@
+<view class="topicsList"><block wx:for="{{6}}" wx:for-item="index" wx:for-index="__i0__"><view data-event-opts="{{[['tap',[['topicsDetails']]]]}}" class="topicsList-list" bindtap="__e"><image class="topicsList-list-img" src="../../static/findDetails_0.png" mode></image><view class="topicsList-list-text"><view>话题.第107期</view><view>喜欢一个人很多年是什么感觉？</view></view></view></block></view>

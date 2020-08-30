@@ -1,0 +1,1 @@
+<view class="detailedListOk"><view class="detailedList-number">已完成(5/160)</view><block wx:for="{{8}}" wx:for-item="index" wx:for-index="__i0__"><view class="detailedList-list"><image src="../../static/home_6.png" mode></image><view class="detailedList-list_text">一起穿情侣装</view></view></block></view>

@@ -53,11 +53,11 @@
 			</view>
 		</view>
 		<view class="my-list">
-			<view class="my-list-li">
-				<navigator url="../../pagesA/myLove/myLove">
+			<navigator url="../../pagesA/myLove/myLove">
+				<view class="my-list-li">
 					<image src="../../static/my_16.png" mode=""></image>我的喜欢
-				</navigator>
-			</view>
+				</view>
+			</navigator>
 			<view class="my-list-li">
 				<image src="../../static/my_19.png" mode=""></image>我的问答
 			</view>

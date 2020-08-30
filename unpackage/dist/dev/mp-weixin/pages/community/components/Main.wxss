@@ -62,12 +62,13 @@
   -webkit-align-items: center;
           align-items: center;
   height: 75rpx;
+  font-size: 32rpx;
   color: #f7737e;
 }
 .follow .conversation image {
   margin-right: 5rpx;
-  width: 30rpx;
-  height: 45rpx;
+  width: 18rpx;
+  height: 26rpx;
 }
 .follow .conversation view {
   display: -webkit-box;
@@ -97,8 +98,8 @@
   background-color: #FFFFFF;
 }
 .follow .dynamic-top .logo {
-  width: 86rpx;
-  height: 86rpx;
+  width: 84rpx;
+  height: 84rpx;
   border-radius: 50%;
 }
 .follow .dynamic-top .dynamic-top-name {
@@ -140,7 +141,7 @@
   margin-right: 10rpx;
   width: 160rpx;
   height: 160rpx;
-  border-radius: 20rpx;
+  border-radius: 10rpx;
 }
 .follow .dynamic-fabulous {
   display: -webkit-box;

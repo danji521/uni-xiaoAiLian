@@ -232,6 +232,10 @@
 
 
 
+
+
+
+
 /* 导航 */
 .user-nav.data-v-c454de34 {
 	display: -webkit-box;
@@ -245,7 +249,7 @@
 	padding: 30rpx 0;
 	font-size: 30rpx;
 	border-bottom: 2rpx solid #999999;
-	position: fixed;
+	/* position: fixed; */
 	/* top: 0; */
 	width: 100%;
 	background-color: #FFFFFF;
@@ -320,8 +324,8 @@
 	padding-top: 20rpx;
 	background: #fff;
 	height: 80rpx;
-	position: fixed;
-	top: 150rpx;
+	/* position: fixed;
+	top: 150rpx; */
 }
 .tab-item.data-v-c454de34 {
 	float: left;

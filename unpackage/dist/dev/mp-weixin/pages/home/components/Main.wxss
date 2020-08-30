@@ -28,32 +28,33 @@
   background-color: #F5F5F5;
   border-top-left-radius: 30rpx;
   border-top-right-radius: 30rpx;
-  margin-top: -33rpx;
-  height: calc(100vh - 450rpx);
+  margin-top: -22rpx;
+  height: calc(100vh - 370rpx);
+  width: 100%;
   position: absolute;
-  border-bottom: 33rpx solid #F5F5F5;
+  border-bottom: 48rpx solid #F5F5F5;
 }
 .scroll-Y {
   height: 90%;
   position: relative;
-  top: 82rpx;
+  top: 120rpx;
 }
 .main-container {
   margin: 0 auto;
-  margin-left: 70rpx;
-  padding-bottom: 25rpx;
-  width: 90%;
+  margin-left: 100rpx;
+  padding-bottom: 64rpx;
+  width: 85%;
   border-left: 1rpx solid #dddddd;
 }
 .main-container-up {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
-  padding: 20rpx 0;
+  padding: 10rpx 0;
 }
 .main-container-up_circular {
-  width: 20rpx;
-  height: 20rpx;
+  width: 16rpx;
+  height: 16rpx;
   margin-right: 20rpx;
   margin-left: -20rpx;
   border-radius: 50%;
@@ -61,25 +62,28 @@
   background-color: #FF788C;
 }
 .main-container-up_date {
-  padding-left: 20rpx;
+  padding-left: 18rpx;
+  color: #dadada;
 }
 .main-container-bt {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
   width: 85%;
-  margin-left: 55rpx;
-  padding: 10rpx 0;
+  margin-left: 50rpx;
+  padding: 16rpx 0 0 0;
   border-radius: 10rpx;
   background-color: #FFFFFF;
+  padding-left: 14rpx;
 }
 .main-container-bt-new {
   width: 100%;
 }
 .main-container-bt-new image {
-  width: 160rpx;
-  height: 160rpx;
-  margin: 5rpx 2.6%;
+  width: 154rpx;
+  height: 154rpx;
+  border-radius: 10rpx;
+  margin: 18rpx 2%;
   float: left;
 }
 .main-container-bt-new_text {
@@ -96,9 +100,10 @@
   -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
           justify-content: flex-end;
-  padding-right: 30rpx;
   padding-top: 10rpx;
   clear: both;
+  color: #dadada;
+  font-size: 30rpx;
 }
 .main-container-bt-new_fabulous view {
   display: -webkit-box;
@@ -110,10 +115,10 @@
   -webkit-box-pack: center;
   -webkit-justify-content: center;
           justify-content: center;
+  margin-right: 30rpx;
 }
 .main-container-bt-new_fabulous image {
-  margin-right: 10rpx;
-  width: 40rpx;
-  height: 40rpx;
+  width: 26rpx;
+  height: 26rpx;
 }
 
