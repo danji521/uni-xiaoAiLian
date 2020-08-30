@@ -44,8 +44,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		height: 130rpx;
-
+		height: 120rpx;
 		image {
 			width: 100rpx;
 			height: 100rpx;

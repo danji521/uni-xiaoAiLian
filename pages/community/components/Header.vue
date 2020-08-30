@@ -28,7 +28,7 @@
 		justify-content: space-between;
 		align-items: center;
 		width: 100%;
-		height: 120rpx;
+		height: 82rpx;
 		border-bottom: 6rpx solid #F8F8F8;
 		// position: fixed;
 		background-color: #FFFFFF;
@@ -36,8 +36,8 @@
 
 		image {
 
-			width: 60rpx;
-			height: 60rpx;
+			width: 42rpx;
+			height: 42rpx;
 		}
 
 		view {
@@ -74,7 +74,7 @@
 			background-color: #fa7286;
 			border-radius: 10rpx;
 			position: absolute;
-			margin-top: 25rpx;
+			margin-top: 50rpx;
 			opacity: .9;
 		}
 

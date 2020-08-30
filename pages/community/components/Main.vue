@@ -98,14 +98,14 @@
 				justify-content: space-between;
 				align-items: center;
 				height: 75rpx;
-
+				font-size: 32rpx;
 				color: #f7737e;
 			}
 
 			image {
 				margin-right: 5rpx;
-				width: 30rpx;
-				height: 45rpx;
+				width: 18rpx;
+				height: 26rpx;
 			}
 
 			view {
@@ -131,8 +131,8 @@
 			background-color: #FFFFFF;
 
 			.logo {
-				width: 86rpx;
-				height: 86rpx;
+				width: 84rpx;
+				height: 84rpx;
 				border-radius: 50%;
 			}
 
@@ -179,7 +179,7 @@
 			margin-right: 10rpx;
 			width: 160rpx;
 			height: 160rpx;
-			border-radius: 20rpx;
+			border-radius: 10rpx;
 		}
 
 		.dynamic-fabulous {

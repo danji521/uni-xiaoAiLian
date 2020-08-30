@@ -13,6 +13,7 @@
 				<view>
 					<image src="../../static/img/q.jpg" mode=""></image>
 				</view>
+				<view class="follow-list-right_day">2019.09.21</view>
 			</view>
 		</view>
 	</view>
@@ -30,65 +31,78 @@
 
 <style lang="scss">
 	.myLove {
-		padding: 0 40rpx;
+		padding: 0 30rpx;
 	}
 
 	.follow-list {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		height: 180rpx;
+		height: 300rpx;
+		border-bottom: 1rpx solid #f6f6f6;
 
 		image {
-			width: 100rpx;
-			height: 100rpx;
+			width: 52rpx;
+			height: 52rpx;
 			border-radius: 50%;
 		}
 	}
 
 	.follow-list-left {
 		display: flex;
-		width: 70%;
 	}
 
 	.follow-list-right {
-		width: 30%;
 		text-align: -webkit-right;
+		position: relative;
+		top: 40rpx;
+
 		image {
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			width: 180rpx;
-			height: 120rpx;
+			width: 272rpx;
+			height: 160rpx;
 			color: #FFFFFF;
 			font-size: 30rpx;
 			background-color: #808080;
 			border-radius: 10rpx;
+
 		}
 	}
 
+	.follow-list-right_day {
+		font-size: 30rpx;
+		color: #C0C0C0;
+		margin-top: 10rpx;
+	}
+
+
+
+
+
 	.follow-list-left_name {
-		padding-left: 20rpx;
+		margin-left: 20rpx;
 		color: #000000;
-		width: 100%;
+		width: 80%;
 	}
 
 	.follow-list-left_nametext1 {
-		font-size: 25rpx;
-		margin-top: 10rpx;
+		font-size: 30rpx;
 		color: #c5c5c5;
 	}
 
 	.follow-list-left_nametext2 {
-		font-size: 20rpx;
+		font-size: 28rpx;
 		margin-top: 10rpx;
 		color: #000000;
 	}
 
 	.follow-list-left_nametext3 {
+		width: 95%;
 		margin-top: 10rpx;
-		font-size: 28rpx;
-		height: 80rpx;
+		font-size: 30rpx;
+		height: 70rpx;
 		overflow: hidden;
 		text-overflow: ellipsis;
 		display: -webkit-box;

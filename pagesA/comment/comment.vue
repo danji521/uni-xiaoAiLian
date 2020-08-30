@@ -30,18 +30,19 @@
 
 <style lang="scss">
 	.comment {
-		padding: 0 40rpx;
+		padding: 0 28rpx;
 	}
 
 	.follow-list {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		height: 180rpx;
+		height: 152rpx;
+		padding-top: 10rpx;
 
 		image {
-			width: 100rpx;
-			height: 100rpx;
+			width: 90rpx;
+			height: 90rpx;
 			border-radius: 50%;
 		}
 	}
@@ -67,11 +68,13 @@
 	.follow-list-left_name {
 		padding-left: 20rpx;
 		color: #000000;
+		font-size: 33rpx;
 	}
 
 	.follow-list-left_name :nth-child(2) {
 		font-size: 30rpx;
 		margin-top: 10rpx;
+		font-size: 30rpx;
 	}
 
 	.follow-list-left_name :nth-child(3) {

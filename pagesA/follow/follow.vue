@@ -27,18 +27,18 @@
 
 <style lang="scss">
 	.follow {
-		padding: 0 40rpx;
+		padding: 0 30rpx;
 	}
 
 	.follow-list {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		height: 160rpx;
+		height: 120rpx;
 
 		image {
-			width: 100rpx;
-			height: 100rpx;
+			width: 88rpx;
+			height: 88rpx;
 			border-radius: 50%;
 		}
 	}
@@ -52,8 +52,8 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			width: 150rpx;
-			height: 60rpx;
+			width: 152rpx;
+			height: 50rpx;
 			color: #FFFFFF;
 			font-size: 30rpx;
 			background-color: #808080;
@@ -63,6 +63,7 @@
 
 	.follow-list-left_name {
 		padding-left: 20rpx;
+		font-size: 32rpx;
 	}
 
 	.follow-list-left_name :nth-child(2) {

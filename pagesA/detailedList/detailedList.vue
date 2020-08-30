@@ -10,7 +10,7 @@
 			</view>
 			<view class="detailedList-box-text">
 				<view>
-					<view>一起穿情侣装我要向全世界宣言你是我的</view>
+					<view class="detailedList-box-text_text">一起穿情侣装我要向全世界宣言你是我的</view>
 					<image src="../../static/detailedList_2.png" mode=""></image>
 				</view>
 			</view>
@@ -38,15 +38,14 @@
 
 <style lang="scss">
 	.detailedList {
-		padding-top: 40rpx;
-		height: 100vh;
-		background-image: linear-gradient(bottom right, #FEDADE, #FF788C);
+		padding-top: 82rpx;
+		height: calc(100vh - 82rpx);
+		background-image: linear-gradient(to bottom, #fcecd3, #ffb0e7);
 	}
 
 	.detailedList-box {
 		margin: 0 auto;
-		width: 86%;
-		// height: 400rpx;
+		width: 588rpx;
 		border-radius: 10rpx;
 	}
 
@@ -54,60 +53,69 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		height: 580rpx;
-		background-color: #E5E5E5;
+		height: 564rpx;
+		background-color: #fff9fd;
 
 		view {
 			text-align: center;
-			color: #555555;
+			color: #d2d0d3;
 			font-size: 30rpx;
+		}
+
+		view:nth-child(1) {
+			height: 260rpx;
 		}
 	}
 
 	.detailedList-box-logo {
-		width: 260rpx;
-		height: 180rpx;
-		margin-bottom: 30rpx;
+		width: 228rpx;
+		height: 184rpx;
+		margin-bottom: 40rpx;
 	}
 
 	.detailedList-box-add {
 		position: relative;
-		bottom: -160rpx;
-		width: 100rpx;
-		height: 100rpx;
+		bottom: -80rpx;
+		width: 120rpx;
+		height: 120rpx;
 	}
 
 	.detailedList-box-text {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		padding-top: 100rpx;
-		height: 200rpx;
+		height: 314rpx;
 		background-color: #FFFFFF;
 
 		image {
-			margin-top: 20rpx;
+			position: relative;
+			top: 46rpx;
 			width: 60rpx;
 			height: 60rpx;
 		}
 
 		view {
 			text-align: center;
-			width: 400rpx;
-			font-size: 35rpx;
 		}
+	}
+
+	.detailedList-box-text_text {
+		margin-top: 60rpx;
+		text-align: center;
+		width: 400rpx;
+		font-size: 35rpx;
 	}
 
 	.detailedList-btn {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		margin: 40rpx auto 0 auto;
-		width: 60%;
+		margin: 68rpx auto 0 auto;
+		width: 380rpx;
 		height: 80rpx;
 		color: #FFFFFF;
 		font-size: 40rpx;
 		border-radius: 10rpx;
-		background-color: #DD524D;
+		background-color: #ff87ab;
 	}
 </style>

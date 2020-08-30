@@ -83,7 +83,7 @@
 
 <style lang="scss">
 	.my {
-		padding: 0 24rpx;
+		padding: 0 30rpx;
 	}
 
 	.my-name {

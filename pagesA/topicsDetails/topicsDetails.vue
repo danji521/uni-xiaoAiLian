@@ -44,7 +44,7 @@
 <style lang="scss">
 	.nav {
 		width: 100%;
-		height: 360rpx;
+		height: 480rpx;
 
 		image {
 			width: 100%;
@@ -56,8 +56,8 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		height: 160rpx;
-		font-size: 50rpx;
+		height: 108rpx;
+		font-size: 45rpx;
 	}
 
 	.text {
@@ -74,11 +74,12 @@
 		justify-content: center;
 		align-items: center;
 		position: fixed;
+		font-size: 30rpx;
 		right: 0;
-		bottom: 160rpx;
+		bottom: 126rpx;
 		color: #FFFFFF;
-		width: 200rpx;
-		height: 100rpx;
+		width: 224rpx;
+		height: 88rpx;
 		border-top-left-radius: 50rpx;
 		border-bottom-left-radius: 50rpx;
 		background-image: linear-gradient(to right, #ff82ba, #ffb1c4);
@@ -92,31 +93,35 @@
 
 	.user-title {
 		padding-left: 20rpx;
+		font-size: 35rpx;
+		height: 60rpx;
 	}
 
 	.user-box {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-
-		height: 160rpx;
-		border-top: 2rpx solid #999999;
+		height: 126rpx;
+		font-size: 30rpx;
+		border-top: 2rpx solid #f5e6ed;
 	}
 
 	.user-box_img {
 		display: flex;
 		align-items: center;
 		padding-left: 20rpx;
+		font-size: 30rpx;
 
 		image {
-			margin-right: 30rpx;
-			width: 100rpx;
-			height: 100rpx;
+			margin-right: 16rpx;
+			width: 46rpx;
+			height: 46rpx;
 			border-radius: 50%;
 		}
 
 		.pink {
 			color: #F06C7A;
+			font-size: 30rpx;
 		}
 	}
 

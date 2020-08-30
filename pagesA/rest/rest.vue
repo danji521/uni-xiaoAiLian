@@ -57,6 +57,11 @@
 
 	.getup {
 		background-image: url(../../static/rest_0.png);
+
+		.sleep-time,
+		.sleep-date {
+			color: #FFFFFF;
+		}
 	}
 
 	.sleep-time {

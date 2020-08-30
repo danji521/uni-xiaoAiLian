@@ -42,7 +42,7 @@
 		background: rgba(0, 0, 0, 1);
 
 		image {
-			width: 330rpx;
+			width: 334rpx;
 			height: 330rpx;
 			border-radius: 30rpx;
 			opacity: .5;
@@ -53,7 +53,7 @@
 		color: #FFFFFF;
 		font-size: 40rpx;
 		position: relative;
-		top: -220rpx;
-		left: 35rpx;
+		top: -200rpx;
+		left: 12%;
 	}
 </style>

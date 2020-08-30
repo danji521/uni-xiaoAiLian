@@ -80,16 +80,16 @@
 
 <style lang="scss">
 	.anniversary {
-		padding-top: 30rpx;
-		height: calc(100vh - 30rpx);
-		background-image: linear-gradient(to bottom, #feecd6, #ffa9dc);
+		padding-top: 34rpx;
+		height: calc(100vh - 34rpx);
+		background-image: linear-gradient(to bottom, #faebd4, #ffabdf);
 	}
 
 	.anniversary-box {
 		margin: 0 auto;
-		margin-bottom: 90rpx;
-		width: 532rpx;
-		height: 510rpx;
+		margin-bottom: 80rpx;
+		width: 530rpx;
+		height: 508rpx;
 		background-image: url(../../static/anniversary_0.png);
 		background-size: 100% 100%;
 	}
@@ -98,17 +98,19 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		height: 200rpx;
-		font-size: 45rpx;
+		height: 44rpx;
+		font-size: 40rpx;
+		position: relative;
+		padding-top: 70rpx;
 	}
 
 	.anniversary-box-days {
 		display: flex;
 		justify-content: center;
-		font-size: 170rpx;
+		font-size: 160rpx;
 		color: #ff6e99;
 		position: relative;
-		top: -80rpx;
+		top: 10rpx;
 
 		view {
 			position: relative;
@@ -121,10 +123,12 @@
 
 	.anniversary-box-img {
 		display: flex;
-		justify-content: center;
+		justify-content: space-around;
 		align-items: center;
+		width: 120rpx;
+		margin: 0 auto;
 		position: relative;
-		top: -80rpx;
+		top: 20rpx;
 
 		image {
 			width: 50rpx;
@@ -147,7 +151,7 @@
 		justify-content: center;
 		align-items: center;
 		position: relative;
-		top: -60rpx;
+		top: 45rpx;
 		color: #aeaeae;
 	}
 
@@ -157,27 +161,29 @@
 		justify-content: space-between;
 		align-items: center;
 		margin: 0 auto;
-		margin-top: 40rpx;
-		width: 90%;
-		height: 104rpx;
+		margin-bottom: 40rpx;
+		width: 692rpx;
+		height: 100rpx;
 		background-color: #FFFFFF;
 		border-radius: 50rpx;
 	}
 
 	.anniversary-baby-birthday {
-		margin-left: -10rpx;
-		width: 105rpx;
-		height: 105rpx;
+		width: 102rpx;
+		height: 102rpx;
 		color: #FFFFFF;
-		text-align: center;
 		font-size: 20rpx;
 		background-color: #ffaa3e;
 		border-radius: 50%;
 
+		view {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
 		:nth-child(1) {
-			font-size: 50rpx;
-			height: 60rpx;
-			padding-top: 4rpx;
+			font-size: 45rpx;
 		}
 	}
 
@@ -187,7 +193,8 @@
 
 	.anniversary-baby-text {
 		text-align: left;
-		width: 400rpx;
+		width: 420rpx;
+		padding-left: 40rpx;
 	}
 
 	.anniversary-baby-days {
@@ -215,9 +222,9 @@
 		justify-content: space-between;
 		align-items: center;
 		margin: 0 auto;
-		margin-top: 40rpx;
-		width: 90%;
-		height: 104rpx;
+		margin-bottom: 40rpx;
+		width: 692rpx;
+		height: 100rpx;
 		background-color: #FFFFFF;
 		border-radius: 50rpx;
 	}
@@ -231,8 +238,8 @@
 		border-radius: 50%;
 
 		image {
-			width: 50rpx;
-			height: 60rpx;
+			width: 54rpx;
+			height: 50rpx;
 		}
 	}
 
@@ -240,19 +247,20 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		width: 100rpx;
-		height: 100rpx;
+		width: 104rpx;
+		height: 104rpx;
 		border-radius: 50%;
 		box-shadow: 0rpx 0rpx 10rpx #e6e6e6;
 
 		image {
-			width: 50rpx;
-			height: 60rpx;
+			width: 56rpx;
+			height: 52rpx;
 		}
 	}
 
 	.anniversary-embrace-text {
 		text-align: left;
-		width: 400rpx;
+		width: 420rpx;
+		padding-left: 40rpx;
 	}
 </style>
