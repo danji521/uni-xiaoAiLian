@@ -9,11 +9,35 @@ var detailedList = function(e) {
 			}
 		})
 }
-// 列表查询
+
+// 创建动态
+var communityList = function(e) {
+	return uniCloud
+		.callFunction({
+			name: 'communityList',
+			data: {
+				logo: e.logo,
+				name: e.name,
+				text: e.text,
+				img: e.img,
+				fabulous: e.fabulous,
+				comment: e.comment,
+				time: e.time
+			}
+		})
+}
+// 清单查询
 var getDetailedList = function(e) {
 	return uniCloud
 		.callFunction({
 			name: 'getDetailedList'
+		})
+}
+// 动态查询
+var getCommunityList = function(e) {
+	return uniCloud
+		.callFunction({
+			name: 'getCommunityList'
 		})
 }
 
@@ -89,6 +113,10 @@ var getRecord = function(e) {
 module.exports = {
 	detailedList,
 	getDetailedList,
+	communityList,
+	getCommunityList,
+
+
 	getDetail,
 	getCircle,
 	getCollect,

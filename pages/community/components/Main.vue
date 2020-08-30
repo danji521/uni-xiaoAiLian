@@ -17,13 +17,14 @@
 				</view>
 			</view>
 			<!-- 动态 -->
-			<view class="dynamic" v-for="index in 10">
+			<view class="dynamic" v-for="(item,index) in userArry.data" :key='index'>
 				<view class="dynamic-top">
 					<view>
-						<image src="../../../static/home_6.png" mode="" class="logo"></image>
+						<image :src="item.logo" mode="" class="logo"></image>
 					</view>
 					<view class="dynamic-top-name">
-						<view class="dynamic-top-name_gender">气呼呼的宝宝 <image src="../../../static/community_3.png" mode=""></image>
+						<view class="dynamic-top-name_gender">{{item.name}}
+							<image src="../../../static/community_3.png" mode=""></image>
 						</view>
 						<view class="dynamic-top-name_days">15分钟前</view>
 					</view>
@@ -31,18 +32,15 @@
 						<image src="../../../static/community_more.png" mode=""></image>
 					</view>
 				</view>
-				<view class="dynamic-text">略略略略略略略略略略略</view>
+				<view class="dynamic-text">{{item.text}}</view>
 				<view class="dynamic-img">
-					<image src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-wanghui/1ffce360-de48-11ea-81ea-f115fe74321c.jpg" mode=""></image>
-					<image src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-wanghui/1ffda6b0-de48-11ea-9dfb-6da8e309e0d8.jpg" mode=""></image>
-					<image src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-wanghui/200017b0-de48-11ea-8a36-ebb87efcf8c0.jpg" mode=""></image>
-					<image src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-wanghui/2004ab90-de48-11ea-9dfb-6da8e309e0d8.jpg" mode=""></image>
+					<image :src="item" mode="" v-for="(item,index) in item.img"></image>
 				</view>
 				<view class="dynamic-fabulous">
 					<view class="dynamic-fabulous_box">我们的情侣头像</view>
 					<view class="dynamic-fabulous_new">
-						<image src="../../../static/home_7.png" mode=""></image>788
-						<image src="../../../static/home_8.png" mode=""></image>788
+						<image src="../../../static/home_7.png" mode=""></image>{{item.fabulous}}
+						<image src="../../../static/home_8.png" mode=""></image>{{item.comment}}
 					</view>
 				</view>
 			</view>
@@ -51,16 +49,28 @@
 </template>
 
 <script>
+	import http from '../../../utile/http.js'
 	export default {
 		data() {
 			return {
-
+				userArry: {}
 			};
+		},
+		created() {
+			this.getCommunityList()
 		},
 		methods: {
 			topicsDetails() {
 				uni.navigateTo({
 					url: '/pagesA/topicsDetails/topicsDetails'
+				})
+			},
+			getCommunityList() {
+				http.getCommunityList({}).then(res => {
+					this.userArry = res.result;
+					uni.switchTab({
+						url: '/pages/community/community'
+					});
 				})
 			}
 		}
@@ -176,7 +186,7 @@
 		}
 
 		.dynamic-img image {
-			margin-right: 10rpx;
+			margin-right: 1%;
 			width: 160rpx;
 			height: 160rpx;
 			border-radius: 10rpx;

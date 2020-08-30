@@ -27,7 +27,8 @@
         "findDetails/findDetails",
         "topicsList/topicsList",
         "topicsDetails/topicsDetails",
-        "discuss/discuss"
+        "discuss/discuss",
+        "adddYnamic/adddYnamic"
       ]
     }
   ],
@@ -77,5 +78,5 @@
   },
   "permission": {},
   "usingComponents": {},
-  "sitemapLocation": "sitemap45.json"
+  "sitemapLocation": "sitemap91.json"
 }

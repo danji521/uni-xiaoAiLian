@@ -115,6 +115,10 @@
                     "path" : "discuss/discuss",
                     "style" : {}
                 }
+                ,{
+                    "path" : "adddYnamic/adddYnamic",
+                    "style" : {}
+                }
             ]
 	}],
 	"globalStyle": {

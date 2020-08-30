@@ -104,11 +104,11 @@
 /******/
 /******/
 /******/ 		// mini-css-extract-plugin CSS loading
-/******/ 		var cssChunks = {"pages/home/components/Header":1,"pages/home/components/Main":1,"pages/home/components/Nav":1,"pages/community/components/Header":1,"pages/community/components/Main":1};
+/******/ 		var cssChunks = {"pages/home/components/Header":1,"pages/home/components/Main":1,"pages/home/components/Nav":1,"pages/community/components/Main":1,"pages/community/components/Header":1};
 /******/ 		if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 		else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 			promises.push(installedCssChunks[chunkId] = new Promise(function(resolve, reject) {
-/******/ 				var href = "" + ({"pages/home/components/Header":"pages/home/components/Header","pages/home/components/Main":"pages/home/components/Main","pages/home/components/Nav":"pages/home/components/Nav","pages/community/components/Header":"pages/community/components/Header","pages/community/components/Main":"pages/community/components/Main"}[chunkId]||chunkId) + ".wxss";
+/******/ 				var href = "" + ({"pages/home/components/Header":"pages/home/components/Header","pages/home/components/Main":"pages/home/components/Main","pages/home/components/Nav":"pages/home/components/Nav","pages/community/components/Main":"pages/community/components/Main","pages/community/components/Header":"pages/community/components/Header"}[chunkId]||chunkId) + ".wxss";
 /******/ 				var fullhref = __webpack_require__.p + href;
 /******/ 				var existingLinkTags = document.getElementsByTagName("link");
 /******/ 				for(var i = 0; i < existingLinkTags.length; i++) {

@@ -6,7 +6,7 @@
 			<view class="active">关注</view>
 			<view>新鲜</view>
 		</view>
-		<view class="header-width">
+		<view class="header-width" @click="adddynamic()">
 			<image src="../../../static/community_0.png" mode=""></image>
 		</view>
 	</view>
@@ -18,6 +18,13 @@
 			return {
 
 			};
+		},
+		methods: {
+			adddynamic() {
+				uni.navigateTo({
+					url: '/pagesA/adddYnamic/adddYnamic'
+				})
+			}
 		}
 	}
 </script>
