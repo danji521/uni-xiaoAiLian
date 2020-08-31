@@ -123,6 +123,10 @@
                     "path" : "addMuseum/addMuseum",
                     "style" : {}
                 }
+                ,{
+                    "path" : "fabulous/fabulous",
+                    "style" : {}
+                }
             ]
 	}],
 	"globalStyle": {

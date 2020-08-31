@@ -8,8 +8,10 @@
 				</navigator>
 			</view>
 			<view class="li">
-				<image src="../../static/news_1.png" mode=""></image>
-				<view>赞</view>
+				<navigator url="/pagesAfabulous/fabulous">
+					<image src="../../static/news_1.png" mode=""></image>
+					<view>赞</view>
+				</navigator>
 			</view>
 			<view class="li">
 				<navigator url="/pagesA/comment/comment">
