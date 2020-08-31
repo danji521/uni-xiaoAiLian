@@ -3,7 +3,7 @@
 		<view class="detailedList-box">
 			<view class="detailedList-box-img">
 				<view>
-					<image src="../../static/detailedList_0.png" mode="" class="detailedList-box-logo" v-if="logoImg==''"></image>
+					<image src="../../static/detailedList_0.png" mode="" class="detailedList-box-logo" v-if="logoImg==''" @click="addImg()"></image>
 					<image :src="logoImg" mode="" class="detailedList-box-logo" v-else></image>
 					<view>用一些照片记录你们的甜蜜</view>
 					<image src="../../static/detailedList_1.png" mode="" class="detailedList-box-add" @click="addImg()"></image>
@@ -19,6 +19,11 @@
 			</view>
 		</view>
 		<view class="detailedList-btn" @click="detailedListOk()">隐藏恋爱任务</view>
+		<navigator url="/pagesA/detailedListOk/detailedListOk">
+			<view id="detailedListOk">
+				已完成
+			</view>
+		</navigator>
 	</view>
 </template>
 
@@ -179,5 +184,17 @@
 		font-size: 40rpx;
 		border-radius: 10rpx;
 		background-color: #ff87ab;
+	}
+
+	#detailedListOk {
+		text-align: center;
+		width: 150rpx;
+		height: 50rpx;
+		font-size: 35rpx;
+		border-radius: 20rpx;
+		border: 1rpx solid #f6a1d8;
+		position: fixed;
+		top: 120rpx;
+		right: 10rpx;
 	}
 </style>

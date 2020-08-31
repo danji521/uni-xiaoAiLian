@@ -1,11 +1,16 @@
 <template>
 	<view class="museum">
+
 		<view class="museum-love">
 			<view class="title">
 				<view>恋爱的那些事</view>
-				<view>更多</view>
+				<navigator url="/pagesA/topicsList/topicsList">
+					<view>更多</view>
+				</navigator>
 			</view>
-			<image src="../../static/img/q.jpg" mode=""></image>
+			<navigator url="/pagesA/topicsDetails/topicsDetails">
+				<image src="../../static/img/q.jpg" mode=""></image>
+			</navigator>
 			<view class="museum-love-text">我不相信永远的爱恋 我只</view>
 		</view>
 		<view class="museum-album">
@@ -31,6 +36,11 @@
 				 @error="videoErrorCallback" :danmu-list="danmuList" enable-danmu danmu-btn controls></video>
 			</view>
 		</view>
+		<navigator url="/pagesA/addMuseum/addMuseum">
+			<view class="museum-add">
+				发布
+			</view>
+		</navigator>
 	</view>
 </template>
 
@@ -114,14 +124,32 @@
 			height: 205rpx;
 		}
 	}
-	.museum-video{
-		padding-top:1rpx;
+
+	.museum-video {
+		padding-top: 1rpx;
 		clear: both;
 	}
+
 	#myVideo {
 		width: 100%;
 		height: 260rpx;
 		border-radius: 10rpx;
 		margin-bottom: 20rpx;
+	}
+
+	.museum-add {
+		position: fixed;
+		bottom: 120rpx;
+		z-index: 100 !important;
+		right: 40rpx;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 120rpx;
+		height: 120rpx;
+		border-radius: 50%;
+		border: 1rpx solid red;
+		color: #FFFFFF;
+		background: rgba(255, 0, 0, 1);
 	}
 </style>

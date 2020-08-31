@@ -119,6 +119,10 @@
                     "path" : "adddYnamic/adddYnamic",
                     "style" : {}
                 }
+                ,{
+                    "path" : "addMuseum/addMuseum",
+                    "style" : {}
+                }
             ]
 	}],
 	"globalStyle": {

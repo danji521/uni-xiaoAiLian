@@ -1,6 +1,6 @@
 <template>
 	<view class="detailedListOk">
-		<view class="detailedList-number">已完成(5/160)</view>
+		<view class="detailedList-number">已完成({{detailedListOk.data.length}})</view>
 		<view class="detailedList-list" v-for="(item,index) in detailedListOk.data" :key='index'>
 			<image :src="item.logo" mode=""></image>
 			<view class="detailedList-list_text">{{item.text}}</view>
@@ -17,7 +17,6 @@
 			};
 		},
 		created() {
-			console.log("123")
 			http.getDetailedList({}).then(res => {
 				this.detailedListOk = res.result;
 				console.log(this.detailedListOk)
@@ -31,7 +30,6 @@
 		display: flow-root;
 		padding: 0 30rpx;
 		overflow-x: hidden;
-		// width: 100%;
 		min-height: 100vh;
 		background-image: linear-gradient(to bottom, #faebd4, #f6a1d8);
 	}

@@ -4,7 +4,7 @@
 			<view class="main-container" v-for="(item,index) in userArry.data" :key='index'>
 				<view class="main-container-up">
 					<view class="main-container-up_circular"></view>
-					<view class="main-container-up_date">2019.10.25</view>
+					<view class="main-container-up_date">{{item.time}}</view>
 				</view>
 				<view class="main-container-bt">
 					<view class="main-container-bt-new">
@@ -14,10 +14,10 @@
 						</view>
 						<view class="main-container-bt-new_fabulous">
 							<view>
-								<image src="../../../static/home_7.png" mode="$2"></image>3
+								<image src="../../../static/home_7.png" mode="$2"></image>{{item.fabulous}}
 							</view>
 							<view>
-								<image src="../../../static/home_7.png" mode="$2"></image>3
+								<image src="../../../static/home_7.png" mode="$2"></image>{{item.comment}}
 							</view>
 						</view>
 					</view>
