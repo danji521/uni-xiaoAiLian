@@ -4,27 +4,37 @@
 			<view>相册</view>
 			<view></view>
 		</view>
-		<view class="museum-album-list" v-for="index in 6" @click="museumVideosDetails()">
-			<image src="../../static/home_6.png" mode=""></image>
+		<view class="museum-album-list" v-for="(item,index) in album.data" :key="index">
+			<image :src="item.imgArry[0]" mode=""></image>
 			<view class="museum-album-list_number">
-				<view>普吉岛之旅</view>
-				<view>(18)</view>
+				<view>{{item.name}}</view>
+				<view>({{item.imgArry.length}})</view>
 			</view>
 		</view>
 	</view>
 </template>
 
 <script>
+	import http from '../../utile/http.js'
 	export default {
 		data() {
 			return {
-
+				album: {}
 			};
+		},
+		created() {
+			this.getMuseumImgList();
 		},
 		methods: {
 			museumVideosDetail() {
 				uni.navigateTo({
 					url: '/pages/museumVideosDetail/museumVideosDetail'
+				})
+			},
+			getMuseumImgList() {
+				http.getMuseumImgList({}).then(err => {
+					console.log(err.result)
+					this.album = err.result;
 				})
 			}
 		}

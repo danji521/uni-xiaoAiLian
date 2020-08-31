@@ -33,7 +33,6 @@ var museumVideoList = function(e) {
 			name: 'museumVideoList',
 			data: {
 				name: e.name,
-				text: e.text,
 				time: e.time,
 				video: e.video
 			}
@@ -54,13 +53,6 @@ var museumImgList = function(e) {
 }
 
 
-
-
-
-
-
-
-
 // 清单查询
 var getDetailedList = function(e) {
 	return uniCloud
@@ -75,8 +67,13 @@ var getCommunityList = function(e) {
 			name: 'getCommunityList'
 		})
 }
-
-
+// 查询相册
+var getMuseumImgList = function(e) {
+	return uniCloud
+		.callFunction({
+			name: 'getMuseumImgList'
+		})
+}
 
 
 
@@ -152,6 +149,7 @@ module.exports = {
 	getCommunityList,
 	museumVideoList,
 	museumImgList,
+	getMuseumImgList,
 
 
 	getDetail,

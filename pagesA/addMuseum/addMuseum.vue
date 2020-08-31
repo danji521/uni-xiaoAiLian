@@ -6,7 +6,7 @@
 			<view :class="{active:navState==1}" @click="navStates(1)">相册</view>
 		</view>
 		<view class="adddYnamic-editor">
-			<editor id="editor" class="ql-container" :placeholder="adddYnamicText" @input="onEditorReady"></editor>
+			<input type="text" value="" v-model="adddYnamicText" />
 		</view>
 		<view class="adddYnamic-text">
 			<video :src="item" controls v-for="(item,index) in videoArry" :key="index" v-if="navState==0"></video>
@@ -26,7 +26,7 @@
 		data() {
 			return {
 				navState: 0,
-				adddYnamicText: '这一刻的想法...',
+				adddYnamicText: '请时输入相册名称',
 				videoArry: [],
 				ImgArry: [],
 				time: ''
@@ -107,8 +107,7 @@
 				date.setTime(date.getTime());
 				var YMD = date.getFullYear() + "." + (date.getMonth() + 1) + "." + date.getDate();
 				http.museumVideoList({
-					name: '预约',
-					text: this.adddYnamicText,
+					name: this.adddYnamicText,
 					time: YMD,
 					video: this.videoArry
 				}).then(res => {
@@ -123,8 +122,7 @@
 				date.setTime(date.getTime());
 				var YMD = date.getFullYear() + "." + (date.getMonth() + 1) + "." + date.getDate();
 				http.museumImgList({
-					name: '预约',
-					text: this.adddYnamicText,
+					name: this.adddYnamicText,
 					time: YMD,
 					img: this.ImgArry
 				}).then(res => {

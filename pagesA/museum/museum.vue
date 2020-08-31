@@ -18,11 +18,11 @@
 				<view>相册</view>
 				<view @click="museumAlbum()">更多</view>
 			</view>
-			<view class="museum-album-list" v-for="index in 6">
-				<image src="../../static/home_6.png" mode=""></image>
+			<view class="museum-album-list" v-for="(item,index) in album.data" :key="index">
+				<image :src="item.imgArry[0]" mode=""></image>
 				<view class="museum-album-list_number">
-					<view>普吉岛之旅</view>
-					<view>(18)</view>
+					<view>{{item.name}}</view>
+					<view>({{item.imgArry.length}})</view>
 				</view>
 			</view>
 		</view>
@@ -45,13 +45,23 @@
 </template>
 
 <script>
+	import http from '../../utile/http.js'
 	export default {
 		data() {
 			return {
-
+				album: {}
 			};
 		},
+		created() {
+			this.getMuseumImgList();
+		},
 		methods: {
+			getMuseumImgList() {
+				http.getMuseumImgList({}).then(err => {
+					console.log(err.result)
+					this.album = err.result;
+				})
+			},
 			museumAlbum() {
 				uni.navigateTo({
 					url: '/pagesA/museumAlbum/museumAlbum'
@@ -105,7 +115,13 @@
 		margin-left: 10%;
 	}
 
+	.museum-album {
+		overflow-y: hidden;
+		height: 680rpx;
+	}
+
 	.museum-album-list {
+
 		margin: 10rpx 0;
 		margin-right: 3%;
 		width: 30%;
@@ -122,6 +138,8 @@
 		image {
 			width: 100%;
 			height: 205rpx;
+			border-radius: 10rpx;
+			border: 1rpx solid #F56C6C;
 		}
 	}
 
@@ -139,7 +157,7 @@
 
 	.museum-add {
 		position: fixed;
-		bottom: 120rpx;
+		bottom: 180rpx;
 		z-index: 100 !important;
 		right: 40rpx;
 		display: flex;
