@@ -26,6 +26,41 @@ var communityList = function(e) {
 			}
 		})
 }
+// 创建视频相册
+var museumVideoList = function(e) {
+	return uniCloud
+		.callFunction({
+			name: 'museumVideoList',
+			data: {
+				name: e.name,
+				text: e.text,
+				time: e.time,
+				video: e.video
+			}
+		})
+}
+// 创建照片相册
+var museumImgList = function(e) {
+	return uniCloud
+		.callFunction({
+			name: 'museumImgList',
+			data: {
+				name: e.name,
+				text: e.text,
+				time: e.time,
+				imgArry: e.img
+			}
+		})
+}
+
+
+
+
+
+
+
+
+
 // 清单查询
 var getDetailedList = function(e) {
 	return uniCloud
@@ -115,6 +150,8 @@ module.exports = {
 	getDetailedList,
 	communityList,
 	getCommunityList,
+	museumVideoList,
+	museumImgList,
 
 
 	getDetail,

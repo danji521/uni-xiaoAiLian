@@ -1,11 +1,18 @@
 <template>
-	<view class="adddYnamic">
+	<view class="adddYnamic  addMuseum">
+		<!-- 导航 -->
+		<view class="addMuseum-nav">
+			<view :class="{active:navState==0}" @click="navStates(0)">视频</view>
+			<view :class="{active:navState==1}" @click="navStates(1)">相册</view>
+		</view>
 		<view class="adddYnamic-editor">
-			<editor id="editor" class="ql-container" :placeholder="placeholder" @input="onEditorReady"></editor>
+			<editor id="editor" class="ql-container" :placeholder="adddYnamicText" @input="onEditorReady"></editor>
 		</view>
 		<view class="adddYnamic-text">
-			<image :src="item" mode="" v-for="(item,index) in imgArry" :key="index"></image>
-			<image src="../../static/detailedList_0.png" mode="" @click="addImg()"></image>
+			<video :src="item" controls v-for="(item,index) in videoArry" :key="index" v-if="navState==0"></video>
+			<image :src="item" mode="" v-for="(item,index) in ImgArry" :key="index" v-if="navState==1"></image>
+			<image src="../../static/detailedList_0.png" mode="" @click="addVideo()" v-if="navState==0"></image>
+			<image src="../../static/detailedList_0.png" mode="" @click="addImg()" v-if="navState==1"></image>
 		</view>
 		<view class="adddYnamic-bnt" @click="addText()">
 			发布
@@ -18,18 +25,49 @@
 	export default {
 		data() {
 			return {
-				placeholder: '这一刻的想法...',
-				imgArry: [],
+				navState: 0,
+				adddYnamicText: '这一刻的想法...',
+				videoArry: [],
+				ImgArry: [],
 				time: ''
 			};
 		},
 		methods: {
 			onEditorReady(err) {
-				this.placeholder = err.detail.text;
+				this.adddYnamicText = err.detail.text;
+			},
+			navStates(err) {
+				this.navState = err;
+			},
+			addVideo() {
+				let _this = this;
+				uni.chooseVideo({
+					count: 9,
+					mediaType: ['video'],
+					success(res) {
+						console.log(res);
+						if (res.tempFilePath != undefined) {
+							let filePath = res.tempFilePath;
+							uniCloud.uploadFile({
+								filePath: filePath,
+								cloudPath: res.name,
+								onUploadProgress: function(progressEvent) {
+									var percentCompleted = Math.round(
+										(progressEvent.loaded * 100) / progressEvent.total
+									);
+								},
+								success(err) {
+									_this.videoArry.push(err.fileID);
+								},
+								fail() {},
+								complete() {}
+							});
+						}
+					}
+				});
 			},
 			addImg() {
 				let _this = this;
-				//前端代码
 				uni.chooseImage({
 					count: 9,
 					success(res) {
@@ -37,7 +75,6 @@
 						if (res.tempFilePaths.length > 0) {
 							for (var i = 0; i < res.tempFilePaths.length; i++) {
 								let filePath = res.tempFilePaths[i];
-								// callback方式，与promise方式二选一即可
 								uniCloud.uploadFile({
 									filePath: filePath,
 									cloudPath: res.tempFiles[i].name,
@@ -47,8 +84,7 @@
 										);
 									},
 									success(err) {
-										console.log(err)
-										_this.imgArry.push(err.fileID);
+										_this.ImgArry.push(err.fileID);
 									},
 									fail() {},
 									complete() {}
@@ -59,23 +95,42 @@
 				});
 			},
 			addText() {
+				if (this.navState == 0) {
+					this.addVideoArry();
+				} else {
+					this.addImgArry();
+				}
+			},
+			addVideoArry() {
 				// 获取时间
 				var date = new Date();
 				date.setTime(date.getTime());
 				var YMD = date.getFullYear() + "." + (date.getMonth() + 1) + "." + date.getDate();
-			
-				http.communityList({
-					logo: 'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-xiaoailian/00a0fc8a-5d7c-412e-aced-9d80f4204899.jpg',
-					name: '潇潇',
-					text: this.placeholder,
-					img: this.imgArry,
-					fabulous: 0,
-					comment: 0,
-					time: YMD
+				http.museumVideoList({
+					name: '预约',
+					text: this.adddYnamicText,
+					time: YMD,
+					video: this.videoArry
 				}).then(res => {
-					uni.reLaunch({
-						url: '/pages/community/community'
-					});
+					// uni.reLaunch({
+					// 	url: '/pages/community/community'
+					// });
+				})
+			},
+			addImgArry() {
+				// 获取时间
+				var date = new Date();
+				date.setTime(date.getTime());
+				var YMD = date.getFullYear() + "." + (date.getMonth() + 1) + "." + date.getDate();
+				http.museumImgList({
+					name: '预约',
+					text: this.adddYnamicText,
+					time: YMD,
+					img: this.ImgArry
+				}).then(res => {
+					// uni.reLaunch({
+					// 	url: '/pages/community/community'
+					// });
 				})
 			}
 		}
@@ -83,9 +138,34 @@
 </script>
 
 <style lang="scss">
+	// 导航
+	.addMuseum-nav {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 150rpx;
+
+		view {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 0 30rpx;
+			width: 200rpx;
+			height: 80rpx;
+			border-radius: 20rpx;
+			border: 1rpx solid #F06C7A;
+		}
+
+		.active {
+			color: #FFFFFF;
+			background-color: #F06C7A;
+		}
+	}
+
 	.adddYnamic-editor {
 		height: 200rpx;
 		padding: 40rpx;
+		border-top: 1rpx solid #F56C6C;
 	}
 
 	.ql-container {
@@ -94,6 +174,14 @@
 
 	.adddYnamic-text {
 		padding: 40rpx;
+
+		video {
+			width: 200rpx;
+			height: 200rpx;
+			border-radius: 20rpx;
+			float: left;
+			margin-left: 10rpx;
+		}
 
 		image {
 			width: 200rpx;
