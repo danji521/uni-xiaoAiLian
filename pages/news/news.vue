@@ -8,7 +8,7 @@
 				</navigator>
 			</view>
 			<view class="li">
-				<navigator url="/pagesAfabulous/fabulous">
+				<navigator url="/pagesA/fabulous/fabulous">
 					<image src="../../static/news_1.png" mode=""></image>
 					<view>赞</view>
 				</navigator>
