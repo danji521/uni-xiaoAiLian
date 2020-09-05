@@ -111,9 +111,9 @@
 					time: YMD,
 					video: this.videoArry
 				}).then(res => {
-					// uni.reLaunch({
-					// 	url: '/pages/community/community'
-					// });
+					uni.reLaunch({
+						url: '/pages/community/community'
+					});
 				})
 			},
 			addImgArry() {
@@ -126,9 +126,9 @@
 					time: YMD,
 					img: this.ImgArry
 				}).then(res => {
-					// uni.reLaunch({
-					// 	url: '/pages/community/community'
-					// });
+					uni.reLaunch({
+						url: '/pages/community/community'
+					});
 				})
 			}
 		}

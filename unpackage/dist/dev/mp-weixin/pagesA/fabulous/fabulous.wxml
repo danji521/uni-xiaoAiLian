@@ -1,0 +1,1 @@
+<view class="follow"><block wx:for="{{5}}" wx:for-item="index" wx:for-index="__i0__"><view class="follow-list"><view class="follow-list-left"><image src="../../static/home_6.png" mode></image><view class="follow-list-left_name"><view>潇潇</view><view>关注了你</view></view></view><view class="follow-list-right"><view>相互关注</view></view></view></block></view>

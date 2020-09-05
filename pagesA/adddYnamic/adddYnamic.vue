@@ -6,6 +6,9 @@
 		<view class="adddYnamic-text">
 			<image :src="item" mode="" v-for="(item,index) in imgArry" :key="index"></image>
 			<image src="../../static/detailedList_0.png" mode="" @click="addImg()"></image>
+
+			<image src="../../static/anniversary_3.png" mode="" @tap="addImg()"></image>
+
 		</view>
 		<view class="adddYnamic-bnt" @click="addText()">
 			发布
@@ -28,6 +31,7 @@
 				this.placeholder = err.detail.text;
 			},
 			addImg() {
+				console.log("123")
 				let _this = this;
 				//前端代码
 				uni.chooseImage({
@@ -63,7 +67,7 @@
 				var date = new Date();
 				date.setTime(date.getTime());
 				var YMD = date.getFullYear() + "." + (date.getMonth() + 1) + "." + date.getDate();
-			
+
 				http.communityList({
 					logo: 'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-xiaoailian/00a0fc8a-5d7c-412e-aced-9d80f4204899.jpg',
 					name: '潇潇',

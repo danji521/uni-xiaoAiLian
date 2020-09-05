@@ -1,6 +1,5 @@
 {
   "pages": [
-    "pages/index/index",
     "pages/home/home",
     "pages/community/community",
     "pages/news/news",
@@ -28,7 +27,9 @@
         "topicsList/topicsList",
         "topicsDetails/topicsDetails",
         "discuss/discuss",
-        "adddYnamic/adddYnamic"
+        "adddYnamic/adddYnamic",
+        "addMuseum/addMuseum",
+        "fabulous/fabulous"
       ]
     }
   ],
@@ -78,5 +79,5 @@
   },
   "permission": {},
   "usingComponents": {},
-  "sitemapLocation": "sitemap91.json"
+  "sitemapLocation": "sitemap1.json"
 }
