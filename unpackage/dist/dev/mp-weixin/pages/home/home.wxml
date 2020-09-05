@@ -1,1 +1,1 @@
-<view class="home"><home-header vue-id="1da55560-1" bind:__l="__l"></home-header><home-nav vue-id="1da55560-2" bind:__l="__l"></home-nav><home-main vue-id="1da55560-3" bind:__l="__l"></home-main><wyb-transition vue-id="1da55560-4" typeList="{{typeList}}" isContentShow="{{show}}" bind:__l="__l" vue-slots="{{['default']}}">1326</wyb-transition></view>
+<view class="home"><home-header vue-id="1da55560-1" bind:__l="__l"></home-header><home-nav vue-id="1da55560-2" bind:__l="__l"></home-nav><home-main vue-id="1da55560-3" bind:__l="__l"></home-main></view>

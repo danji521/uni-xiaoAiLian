@@ -103,11 +103,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
-var components = {
-  wybTransition: function() {
-    return __webpack_require__.e(/*! import() | components/wyb-transition/wyb-transition */ "components/wyb-transition/wyb-transition").then(__webpack_require__.bind(null, /*! @/components/wyb-transition/wyb-transition.vue */ 283))
-  }
-}
+var components
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -143,11 +139,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var wybTransition = function wybTransition() {__webpack_require__.e(/*! require.ensure | components/wyb-transition/wyb-transition */ "components/wyb-transition/wyb-transition").then((function () {return resolve(__webpack_require__(/*! ../../components/wyb-transition/wyb-transition.vue */ 283));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var HomeHeader = function HomeHeader() {__webpack_require__.e(/*! require.ensure | pages/home/components/Header */ "pages/home/components/Header").then((function () {return resolve(__webpack_require__(/*! ./components/Header.vue */ 218));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var HomeNav = function HomeNav() {__webpack_require__.e(/*! require.ensure | pages/home/components/Nav */ "pages/home/components/Nav").then((function () {return resolve(__webpack_require__(/*! ./components/Nav.vue */ 225));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var HomeMain = function HomeMain() {Promise.all(/*! require.ensure | pages/home/components/Main */[__webpack_require__.e("common/vendor"), __webpack_require__.e("pages/home/components/Main")]).then((function () {return resolve(__webpack_require__(/*! ./components/Main.vue */ 232));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
-
-
-
-
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var HomeHeader = function HomeHeader() {__webpack_require__.e(/*! require.ensure | pages/home/components/Header */ "pages/home/components/Header").then((function () {return resolve(__webpack_require__(/*! ./components/Header.vue */ 268));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var HomeNav = function HomeNav() {__webpack_require__.e(/*! require.ensure | pages/home/components/Nav */ "pages/home/components/Nav").then((function () {return resolve(__webpack_require__(/*! ./components/Nav.vue */ 276));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var HomeMain = function HomeMain() {Promise.all(/*! require.ensure | pages/home/components/Main */[__webpack_require__.e("common/vendor"), __webpack_require__.e("pages/home/components/Main")]).then((function () {return resolve(__webpack_require__(/*! ./components/Main.vue */ 284));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 
@@ -168,15 +160,37 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
   components: {
     HomeHeader: HomeHeader,
     HomeNav: HomeNav,
-    HomeMain: HomeMain,
-    wybTransition: wybTransition },
+    HomeMain: HomeMain },
 
   data: function data() {
     return {
       typeList: ['fade', 'slide-up'],
       show: true };
 
+  },
+  created: function created() {
+    var user = {
+      suser: {
+        name: '小鱼儿',
+        birthday: '1993.05.08',
+        logoUrl: 'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-xiaoailian/d48cb3be-7faa-4ef0-a717-1dda3f36bf5e.jpg' },
+
+      fuser: {
+        name: '潇潇我',
+        birthday: '1993.05.08',
+        logoUrl: 'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-xiaoailian/d48cb3be-7faa-4ef0-a717-1dda3f36bf5e.jpg' },
+
+      time: 100 };
+
+    uni.setStorage({
+      key: 'user',
+      data: user,
+      success: function success() {
+        console.log('success');
+      } });
+
   } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ })
 ],[[17,"common/runtime","common/vendor"]]]);

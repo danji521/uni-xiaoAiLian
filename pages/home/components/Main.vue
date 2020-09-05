@@ -14,10 +14,11 @@
 						</view>
 						<view class="main-container-bt-new_fabulous">
 							<view>
-								<image src="../../../static/home_7.png" mode="$2"></image>{{item.fabulous}}
+								<image src="../../../static/home_7.png" mode="$2" @click="upFabulous(index)"></image>{{item.fabulous}}
 							</view>
 							<view>
-								<image src="../../../static/home_7.png" mode="$2"></image>{{item.comment}}
+								<image src="../../../static/home_7.png" mode="$2" @click="upComment(index)"></image>
+								{{item.comment}}
 							</view>
 						</view>
 					</view>
@@ -37,12 +38,25 @@
 		},
 		created() {
 			this.getCommunityList()
+			this.upCommunityList()
 		},
 		methods: {
 			getCommunityList() {
 				http.getCommunityList({}).then(res => {
 					this.userArry = res.result;
 					console.log(this.userArry)
+				})
+			},
+			upComment(index) {
+				http.upCommunityList({
+					_id: this.userArry.data[index]._id,
+					comment: this.userArry.data[index].comment++
+				})
+			},
+			upFabulous(index) {
+				http.upCommunityList({
+					_id: this.userArry.data[index]._id,
+					fabulous: this.userArry.data[index].fabulous++
 				})
 			}
 		}

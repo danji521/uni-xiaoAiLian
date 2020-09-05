@@ -20,7 +20,7 @@
 			<view class="dynamic" v-for="(item,index) in userArry.data" :key='index'>
 				<view class="dynamic-top">
 					<view>
-						<image :src="item.logo" mode="" class="logo"></image>
+						<image :src="item.logo" mode="" class="logo" @click="delCommunityList"></image>
 					</view>
 					<view class="dynamic-top-name">
 						<view class="dynamic-top-name_gender">{{item.name}}
@@ -29,7 +29,7 @@
 						<view class="dynamic-top-name_days">15分钟前</view>
 					</view>
 					<view class="dynamic-top-more">
-						<image src="../../../static/community_more.png" mode=""></image>
+						<image src="../../../static/community_more.png" mode="" @click="delCommunityList(index)"></image>
 					</view>
 				</view>
 				<view class="dynamic-text">{{item.text}}</view>
@@ -39,8 +39,8 @@
 				<view class="dynamic-fabulous">
 					<view class="dynamic-fabulous_box">我们的情侣头像</view>
 					<view class="dynamic-fabulous_new">
-						<image src="../../../static/home_7.png" mode=""></image>{{item.fabulous}}
-						<image src="../../../static/home_8.png" mode=""></image>{{item.comment}}
+						<image src="../../../static/home_7.png" mode="" @click="upFabulous(index)"></image>{{item.fabulous}}
+						<image src="../../../static/home_8.png" mode="" @click="upComment(index)"></image>{{item.comment}}
 					</view>
 				</view>
 			</view>
@@ -58,6 +58,7 @@
 		},
 		created() {
 			this.getCommunityList()
+
 		},
 		methods: {
 			topicsDetails() {
@@ -68,6 +69,28 @@
 			getCommunityList() {
 				http.getCommunityList({}).then(res => {
 					this.userArry = res.result;
+					console.log(this.userArry)
+				})
+			},
+			upComment(index) {
+				http.upCommunityList({
+					_id: this.userArry.data[index]._id,
+					comment: this.userArry.data[index].comment++
+				})
+			},
+			upFabulous(index) {
+				http.upCommunityList({
+					_id: this.userArry.data[index]._id,
+					fabulous: this.userArry.data[index].fabulous++
+				})
+			},
+			delCommunityList(index) {
+				http.delCommunityList({
+					_id: this.userArry.data[index]._id,
+				}).then(err => {
+					uni.reLaunch({
+						url: '/pages/community/community'
+					});
 				})
 			}
 		}

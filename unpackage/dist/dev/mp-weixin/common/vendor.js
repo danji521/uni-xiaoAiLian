@@ -9523,8 +9523,28 @@ var getMuseumImgList = function getMuseumImgList(e) {
     name: 'getMuseumImgList' });
 
 };
+// 修改点赞
+var upCommunityList = function upCommunityList(e) {
+  return uniCloud.
+  callFunction({
+    name: 'upCommunityList',
+    data: {
+      _id: e._id,
+      comment: e.comment,
+      fabulous: e.fabulous } });
 
 
+};
+// 删除动态
+var delCommunityList = function delCommunityList(e) {
+  return uniCloud.
+  callFunction({
+    name: 'delCommunityList',
+    data: {
+      _id: e._id } });
+
+
+};
 
 
 
@@ -9599,13 +9619,8 @@ module.exports = {
   museumVideoList: museumVideoList,
   museumImgList: museumImgList,
   getMuseumImgList: getMuseumImgList,
-
-
-  getDetail: getDetail,
-  getCircle: getCircle,
-  getCollect: getCollect,
-  circle: circle,
-  getRecord: getRecord };
+  upCommunityList: upCommunityList,
+  delCommunityList: delCommunityList };
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/uni-cloud/dist/index.js */ 86)["default"]))
 
 /***/ }),

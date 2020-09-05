@@ -1,7 +1,6 @@
 {
   "navigationBarTitleText": "首页",
   "usingComponents": {
-    "wyb-transition": "/components/wyb-transition/wyb-transition",
     "home-header": "/pages/home/components/Header",
     "home-nav": "/pages/home/components/Nav",
     "home-main": "/pages/home/components/Main"

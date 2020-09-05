@@ -146,9 +146,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-
-
 var _http = _interopRequireDefault(__webpack_require__(/*! ../../utile/http.js */ 85));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} //
 //
 //
@@ -164,11 +161,11 @@ var _http = _interopRequireDefault(__webpack_require__(/*! ../../utile/http.js *
 //
 //
 //
-//
-//
-//
-var _default = { data: function data() {return { placeholder: '这一刻的想法...', imgArry: [], time: '' };}, methods: { onEditorReady: function onEditorReady(err) {this.placeholder = err.detail.text;}, addImg: function addImg() {console.log("123");var _this = this; //前端代码
-      uni.chooseImage({ count: 9, success: function success(res) {
+var _default = { data: function data() {return { placeholder: '这一刻的想法...', imgArry: [], time: '' };}, methods: { onEditorReady: function onEditorReady(err) {this.placeholder = err.detail.text;}, addImg: function addImg() {console.log("123");var _this = this;
+      //前端代码
+      uni.chooseImage({
+        count: 9,
+        success: function success(res) {
           console.log(res);
           if (res.tempFilePaths.length > 0) {
             for (var i = 0; i < res.tempFilePaths.length; i++) {

@@ -4,12 +4,13 @@
 		<view class="anniversary-box">
 			<view class="anniversary-box-title">我们已相爱</view>
 			<view class="anniversary-box-days">
-				100 <view> 天</view>
+				{{user.time}}
+				<view> 天</view>
 			</view>
 			<view class="anniversary-box-img">
-				<image src="../../static/home_6.png" mode=""></image>
+				<image :src="user.fuser.logoUrl" mode=""></image>
 				<image src="../../static/my_16.png" mode="" class="heart"></image>
-				<image src="../../static/home_5.png" mode=""></image>
+				<image :src="user.suser.logoUrl" mode=""></image>
 			</view>
 			<view class="anniversary-box-date">从2019-8-20至今</view>
 		</view>
@@ -17,7 +18,7 @@
 		<view class="anniversary-baby baby">
 			<view class="anniversary-baby-birthday">
 				<view>10</view>
-				<view>1994.01</view>
+				<view>{{user.fuser.birthday}}</view>
 			</view>
 			<view class="anniversary-baby-text">宝贝潇潇的生日还有</view>
 			<view class="anniversary-baby-days">
@@ -29,7 +30,7 @@
 		<view class="anniversary-baby">
 			<view class="anniversary-baby-birthday my">
 				<view>8</view>
-				<view>1993.05</view>
+				<view>{{user.suser.birthday}}</view>
 			</view>
 			<view class="anniversary-baby-text">宝贝潇潇的生日还有</view>
 			<view class="anniversary-baby-days">
@@ -57,14 +58,6 @@
 				<image src="../../static/anniversary_5.png" mode=""></image>
 			</view>
 		</view>
-
-
-
-
-
-
-
-
 	</view>
 </template>
 
@@ -72,8 +65,17 @@
 	export default {
 		data() {
 			return {
-
+				user: {}
 			};
+		},
+		created() {
+			let _this = this;
+			uni.getStorage({
+				key: 'user',
+				success: function(res) {
+					_this.user = res.data;
+				}
+			});
 		}
 	}
 </script>

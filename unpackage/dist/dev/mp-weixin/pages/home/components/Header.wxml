@@ -1,1 +1,1 @@
-<view class="header"><view class="header-up"><image src="../../../static/home_4.png" mode></image><view>我们相爱了</view><image src="../../../static/home_5.png" mode></image></view><view class="header-bt">100<view>天</view></view></view>
+<view class="header"><view class="header-up"><image src="{{user.fuser.logoUrl}}" mode></image><view>我们相爱了</view><image src="{{user.suser.logoUrl}}" mode></image></view><view class="header-bt">{{''+user.time+''}}<view>天</view></view></view>

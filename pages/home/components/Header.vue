@@ -1,12 +1,12 @@
 <template>
 	<view class="header">
 		<view class="header-up">
-			<image src="../../../static/home_4.png" mode=""></image>
+			<image :src="user.fuser.logoUrl" mode=""></image>
 			<view>我们相爱了</view>
-			<image src="../../../static/home_5.png" mode=""></image>
+			<image :src="user.suser.logoUrl" mode=""></image>
 		</view>
 		<view class="header-bt">
-			100
+			{{user.time}}
 			<view>天</view>
 		</view>
 	</view>
@@ -16,8 +16,17 @@
 	export default {
 		data() {
 			return {
-
+				user: {}
 			};
+		},
+		created() {
+			let _this = this;
+			uni.getStorage({
+				key: 'user',
+				success: function(res) {
+					_this.user = res.data;
+				}
+			});
 		}
 	}
 </script>

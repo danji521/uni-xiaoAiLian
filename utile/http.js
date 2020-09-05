@@ -74,8 +74,28 @@ var getMuseumImgList = function(e) {
 			name: 'getMuseumImgList'
 		})
 }
-
-
+// 修改点赞
+var upCommunityList = function(e) {
+	return uniCloud
+		.callFunction({
+			name: 'upCommunityList',
+			data: {
+				_id: e._id,
+				comment: e.comment,
+				fabulous: e.fabulous
+			}
+		})
+}
+// 删除动态
+var delCommunityList = function(e) {
+	return uniCloud
+		.callFunction({
+			name: 'delCommunityList',
+			data: {
+				_id: e._id
+			}
+		})
+}
 
 
 
@@ -150,11 +170,10 @@ module.exports = {
 	museumVideoList,
 	museumImgList,
 	getMuseumImgList,
+	upCommunityList,
+	delCommunityList
 
 
-	getDetail,
-	getCircle,
-	getCollect,
-	circle,
-	getRecord
+
+
 }

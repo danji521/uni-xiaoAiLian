@@ -130,7 +130,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
 //
 //
 //
@@ -163,7 +163,56 @@ var _default =
 {
   data: function data() {
     return {
-      rest: 1 };
+      rest: 0,
+      data: {},
+      user: {} };
+
+  },
+  created: function created() {
+    var oDate = new Date();
+    // 判断当前白天黑夜
+    if (oDate.getHours() > 17) {
+      this.rest = 1;
+    }
+    // 获取时间
+    var data = {
+      m: oDate.getMonth() + 1,
+      d: oDate.getDate(),
+      t: oDate.getHours() + ":" + oDate.getMinutes(),
+      w: oDate.getDay() };
+
+    this.data = data;
+    switch (data.w) {
+      case 0:
+        this.data.w = '星期日';
+        break;
+      case 1:
+        this.data.w = '星期一';
+        break;
+      case 2:
+        this.data.w = '星期二';
+        break;
+      case 3:
+        this.data.w = '星期三';
+        break;
+      case 4:
+        this.data.w = '星期四';
+        break;
+      case 5:
+        this.data.w = '星期五';
+        break;
+      case 6:
+        this.data.w = '星期六';
+        break;}
+
+    // 获取头像信息
+    var _this = this;
+    uni.getStorage({
+      key: 'user',
+      success: function success(res) {
+        _this.user = res.data;
+      } });
+
 
   },
   methods: {
@@ -174,6 +223,7 @@ var _default =
         this.rest = 0;
       }
     } } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 

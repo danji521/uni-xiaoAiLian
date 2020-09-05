@@ -6,9 +6,6 @@
 		<view class="adddYnamic-text">
 			<image :src="item" mode="" v-for="(item,index) in imgArry" :key="index"></image>
 			<image src="../../static/detailedList_0.png" mode="" @click="addImg()"></image>
-
-			<image src="../../static/anniversary_3.png" mode="" @tap="addImg()"></image>
-
 		</view>
 		<view class="adddYnamic-bnt" @click="addText()">
 			发布
