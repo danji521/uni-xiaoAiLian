@@ -38,7 +38,6 @@
 		},
 		created() {
 			this.getCommunityList()
-			this.upCommunityList()
 		},
 		methods: {
 			getCommunityList() {
